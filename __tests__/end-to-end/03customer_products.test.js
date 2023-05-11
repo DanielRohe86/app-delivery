@@ -94,6 +94,8 @@ describe(requirement(13), () => {
   });
 
   test("O avaliador testará se o local storage contém um token válido", async () => {
+    console.log("tokenVerification", (await localStorage(page, "user")).token);
+    // console.log(typeof jwtKey);
     expect(
       !!jwt.verify((await localStorage(page, "user")).token, jwtKey)
     ).toEqual(true);
@@ -106,7 +108,7 @@ describe(requirement(13), () => {
   })
 });
 
-describe(requirement(14), () => {
+describe.only(requirement(14), () => {
   const cards = products.state01;
 
   test("O avaliador testará se os dados de cada card condizem com os dados esperados",
