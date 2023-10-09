@@ -1,607 +1,609 @@
-# Boas vindas ao repositório do projeto App de Delivery
+# Welcome to the Delivery App project repository
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
+To carry out the project, pay attention to each step described below, and if you have any questions, send us via _Slack_! #vqv 🚀
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
+Here you will find details on how to structure the development of your project from this repository, using a specific branch and a _Pull Request_ to place your codes.
 
 ---
 
-## Termos de acordo
+## Terms of agreement
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta e do Manual da Pessoa Estudante da Trybe.
+By starting this project, you agree to the guidelines of Trybe's Code of Conduct and Student Handbook.
 
-# Entregáveis
+# Deliverables
 
 <details>
-  <summary>
-    <strong>🤷🏽‍♀️ Como entregar</strong>
-  </summary><br>
+   <summary>
+     <strong>🤷🏽‍♀️ How to deliver</strong>
+   </summary><br>
 
-- **Cada grupo terá uma branch específica** no formato `main-group-X`. Ex: `main-group-1`; `main-group-2`; etc;
+- **Each group will have a specific branch** in the format `main-group-X`. Ex: `main-group-1`; `main-group-2`; etc;
 
-- **Para entregar o seu projeto você deverá criar um `Pull Request` base neste repositório no formato `[MAIN GROUP X] [BASE]`**. Seu `Pull Request` deve apontar da branch `main-group-X` para a branch `main` (que será sua PR principal) e deve agregar todo o trabalho do seu grupo para avaliação no final do desenvolvimento;
+- **To deliver your project you must create a `Pull Request` based on this repository in the format `[MAIN GROUP X] [BASE]`**. Your `Pull Request` must point from the `main-group-X` branch to the `main` branch (which will be your main PR) and must aggregate all of your group's work for evaluation at the end of development;
 
-- **Cada feature/fix/etc deve ser desenvolvida em uma nova branch**, cujo formato preferencialmente deve ser `main-group-X-<alteração>-<especificação>`. Ex: `main-group-1-feat-login-form`. Isso ajudará tanto o seu time quanto a equipe de instrução a localizar seus trabalhos no projeto;
+- **Each feature/fix/etc must be developed in a new branch**, whose format should preferably be `main-group-X-<change>-<specification>`. Ex: `main-group-1-feat-login-form`. This will help both your team and instructional staff locate their work on the project;
 
-- **No término do projeto, cada feature/fix/etc deve ser mergeada _(preferencialmente via PR, com code review e aprovação de todo o grupo)_ com a branch principal do grupo**, onde ocorrerá a avaliação. Ex: `main-group-1-feat-login-form` deve ser mergeado com `main-group-1`;
+- **At the end of the project, each feature/fix/etc must be merged _(preferably via PR, with code review and approval from the entire group)_ with the group's main branch**, where the evaluation will take place. Ex: `main-group-1-feat-login-form` must be merged with `main-group-1`;
 
-- **Cada PR deve, preferencialmente, ter o título no formato `[MAIN GROUP X] [CONTEXTO] [ALTERAÇÃO] [DESCRIÇÃO]`**. Ex: `[MAIN GROUP 1] [API] [FEAT] [LOGIN]`; `[MAIN GROUP 1] [FRONT] [FEAT] [LOGIN-FORM]`; etc. Isso ajudará tanto o seu time quanto a equipe de instrução a localizar seus trabalhos no projeto.
+- **Each PR should preferably have a title in the format `[MAIN GROUP X] [CONTEXT] [CHANGE] [DESCRIPTION]`**. Ex: `[MAIN GROUP 1] [API] [FEAT] [LOGIN]`; `[MAIN GROUP 1] [FRONT] [FEAT] [LOGIN-FORM]`; etc. This will help both your team and instructional staff locate their work on the project.
 
-  > Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/fe827a71-3222-4b4d-a66f-ed98e09961af/day/35e03d5e-6341-4a8c-84d1-b4308b2887ef/lesson/573db55d-f451-455d-bdb5-66545668f436) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
+   > Remember that you can consult our content on [Git & GitHub](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca -4269beb17e17/section/fe827a71-3222-4b4d-a66f-ed98e09961af/day/35e03d5e-6341-4a8c-84d1-b4308b2887ef/lesson/573db55d-f451-455d-bdb5-66545668 f436) and our [Blog - Git & GitHub](https ://blog.betrybe.com/tecnologia/git-e-github/) whenever you need it!
 
 </details>
 
 <details>
-  <summary>
-    <strong>👨‍💻 O que deverá ser desenvolvido</strong>
-  </summary><br>
+   <summary>
+     <strong>👨‍💻 What should be developed</strong>
+   </summary><br>
 
-  Esse será o seu projeto mais completo até agora! Nessa aplicação, seu grupo será responsável por criar e integrar tanto o back-end quanto o front-end, criando uma plataforma de delivery de cerveja. 🍻
+   This will be your most complete project yet! In this application, your group will be responsible for creating and integrating both the back-end and front-end, creating a beer delivery platform. 🍻
 
-  O projeto não é só codar, mas também é trabalhar em equipe, aprender e se divertir muito!
+   The project is not just about coding, but also about working as a team, learning and having a lot of fun!
 
-  **Neste projeto, seu grupo deve desenvolver um app de delivery para uma distribuidora de bebidas. Veja abaixo o contexto da entrega que deve ser feita:**
+   **In this project, your group must develop a delivery app for a beverage distributor. See below the context of the delivery that must be made:**
 
-  A distribuidora de cervejas da dona Tereza está se informatizando! 🚀 Seu negócio, antes focado em um local específico da cidade, passou a receber uma quantidade massiva de encomendas de outros pontos, expandindo sua atuação via delivery. Isso tudo graças ao excelente preço das bebidas e atendimento da equipe de vendas.
+   Dona Tereza's beer distributor is becoming computerized! 🚀 Your business, previously focused on a specific location in the city, started receiving a massive amount of orders from other points, expanding its operations via delivery. This is all thanks to the excellent price of drinks and service from the sales team.
 
-  Agora a distribuidora possui alguns pontos de venda na cidade para agilizar no atendimento dessas áreas. Cada ponto de venda, por sua vez, possui uma pessoa vendedora responsável.
+   Now the distributor has some points of sale in the city to speed up service in these areas. Each point of sale, in turn, has a responsible sales person.
 
-  Como seu antigo sistema, que era um conjunto de planilhas, já não atende a necessidade do negócio por gerar muita manutenção, dona Tereza procurou a sua equipe de pessoas desenvolvedoras com uma ideia de aplicativo que pudesse agilizar a vida de sua equipe e das pessoas que compram seus produtos. O aplicativo precisa:
+   As her old system, which was a set of spreadsheets, no longer meets the needs of the business as it generates a lot of maintenance, Ms. Tereza approached her team of developers with an idea for an application that could streamline the lives of her team and the people they work with. buy your products. The application needs:
 
-- Ter acesso via login: tanto clientes como pessoas vendedoras, assim como a própria dona Tereza, que administra o sistema, devem ter acesso ao aplicativo via login, porém para funções diferentes: (1) A pessoa cliente, que compra da lista de produtos; (2) A pessoa vendedora, que aprova, prepara e entrega; (3) A pessoa administradora, que gerencia quem usa o aplicativo;
-- Fazer a comunicação entre clientes e pessoas vendedoras: a pessoa cliente faz o pedido via "carrinho de compras" e a pessoa vendedora aprova, prepara e envia esse pedido. Quando o produto é recebido por quem comprou, essa pessoa marca o pedido como "recebido". Ambos devem possuir detalhes sobre seus pedidos;
-- Se a pessoa cliente faz o pedido, o mesmo deve aparecer para a pessoa vendedora em seu dash de pedidos após a atualização da página. A pessoa cliente, por sua vez, deve ter as informações sobre seu pedido quando sua página for atualizada, ou seja, ter informações se o pedido está sendo preparado ou se já saiu pra entrega;
+- Have access via login: both customers and sellers, as well as Ms. Tereza herself, who manages the system, must have access to the application via login, but for different functions: (1) The customer, who purchases from the product list ; (2) The selling person, who approves, prepares and delivers; (3) The administrator person, who manages who uses the application;
+- Communicate between customers and salespeople: the customer places the order via the "shopping cart" and the salesperson approves, prepares and sends the order. When the product is received by the person who purchased it, that person marks the order as "received". Both must have details about their requests;
+- If the customer places the order, it should appear to the seller in their order dashboard after updating the page. The customer, in turn, must have information about their order when their page is updated, that is, have information whether the order is being prepared or has already been delivered;
 
-  Sua equipe, que já possui uma boa experiência com desenvolvimento, em pouco tempo apresentou um [protótipo](#construcao-do-front-end-e-componentizacao) e um [Diagrama de ER](./assets/readme/erdr.png) conforme imagem:
+His team, which already has good development experience, quickly presented a [prototype](#construcao-do-front-end-e-componentizacao) and an [ER Diagram](./assets/readme/erdr. png) as shown in the image:
 
-  ![Diagrama de ER](./assets/readme/erdr.png)
+   ![ER Diagram](./assets/readme/erdr.png)
 
-  A ideia da sua equipe já pressupõe alguma escalabilidade, dado que foram estabelecidas algumas entidades genéricas no banco de dados e componentização no front-end, para que, caso o sistema cresça, não seja muito difícil mudar e ampliar essa estrutura.
+   His team's idea already presupposes some scalability, given that some generic entities were established in the database and componentization in the front-end, so that, if the system grows, it wouldn't be too difficult to change and expand this structure.
 
-  **A proposta encantou, mas dona Tereza quer ver o negócio em ação! Ela está disposta a pagar por um MVP do projeto e vocês fecharam o negócio com um prazo combinado para entrega.**
+   **The proposal was enchanting, but Ms. Tereza wants to see the business in action! She is willing to pay for an MVP of the project and you closed the deal with an agreed deadline for delivery.**
 
-  Agora é mãos à obra! Vamos começar?
+   Now it's time to get to work! Let's start?
 
 </details>
 
 <details>
-  <summary>
-    <strong>🗓 Data de Entrega</strong>
-  </summary><br>
+   <summary>
+     <strong>🗓 Delivery Date</strong>
+   </summary><br>
   
-- Este projeto é em grupo;
-- Serão `13` dias de projeto;
-- Data de entrega para avaliação regular do projeto: `25/05/2023 14:00`.
+- This project is a group project;
+- There will be `13` days of project;
+- Delivery date for regular project evaluation: `25/05/2023 14:00`.
 
 </details>
 
-# Orientações
+# Guidelines
 
 <details>
-  <summary>
-    <strong>‼️ Antes de começar a desenvolver</strong>
-  </summary><br>
+   <summary>
+     <strong>‼️ Before you start developing</strong>
+   </summary><br>
 
-  1. Clone o repositório
+   1. Clone the repository
 
-- Use o comando: `git clone git@github.com:tryber/sd-025-b-project-delivery-app.git`.
-- Entre na pasta do repositório que você acabou de clonar:
-  - `cd sd-025-b-project-delivery-app`
-- Vá para a branch do seu grupo, com `git checkout main-group-XX && git pull`, onde `XX` é o número do seu grupo. Exemplos: `main-group-1`, `main-group-22`.
+- Use the command: `git clone git@github.com:tryber/sd-025-b-project-delivery-app.git`.
+- Go to the repository folder you just cloned:
+   - `cd sd-025-b-project-delivery-app`
+- Go to your group's branch, with `git checkout main-group-XX && git pull`, where `XX` is your group number. Examples: `main-group-1`, `main-group-22`.
 
-  2. Instale as dependências
+   2. Install dependencies
 
-- Para isso, use o seguinte comando: `npm install`
+- To do this, use the following command: `npm install`
 
-  3. Faça alterações separadas por novas branchs, criadas a partir da branch `main-group-XX`. Lembre-se de criar uma nova branch para cada demanda.
+   3. Make changes separated by new branches, created from the `main-group-XX` branch. Remember to create a new branch for each demand.
 
-- Verifique se você está na branch `main-group-XX`
-  - Exemplo: `git branch`
-- Se não estiver, mude para a branch `main-group-XX`
-  - Exemplo: `git checkout main-group-XX && git pull`
-- Agora, crie uma branch para a demanda que você vai desenvolver do seu projeto
-  - Você deve criar uma branch com uma breve descrição da demanda a ser desenvolvida
-  - Exemplo: `git checkout -b main-group-XX-cria-campo-de-input`
+- Make sure you are on the `main-group-XX` branch
+   - Example: `git branch`
+- If not, switch to the `main-group-XX` branch
+   - Example: `git checkout main-group-XX && git pull`
+- Now, create a branch for the demand you will develop for your project
+   - You must create a branch with a brief description of the demand to be developed
+   - Example: `git checkout -b main-group-XX-create-input-field`
 
-  4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+   4. Add changes to Git _stage_ and `commit`
 
-- Verifique se as mudanças ainda não estão no _stage_
-  - Exemplo: `git status` (devem aparecer listadas as novas alterações em vermelho)
-- Adicione o novo arquivo ao _stage_ do Git
-  - Exemplo:
-    - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-    - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
-- Faça o `commit` inicial
-  - Exemplo:
-    - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
-    - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+- Check that the changes are not yet in _stage_
+   - Example: `git status` (new changes should be listed in red)
+- Add the new file to Git _stage_
+   - Example:
+     - `git add .` (adding all changes - _that were in red_ - to the Git stage)
+     - `git status` (the file _joaozinho/README.md_ should appear listed in green)
+- Make the initial `commit`
+   - Example:
+     - `git commit -m 'starting project x'` (making the first commit)
+     - `git status` (a message like _nothing to commit_ should appear)
 
-  5. Adicione a sua branch com o novo `commit` ao repositório remoto
+   5. Add your branch with the new `commit` to the remote repository
 
-- Usando o exemplo anterior: `git push -u origin main-group-XX-cria-campo-de-input`
+- Using the previous example: `git push -u origin main-group-XX-creates-input-field`
 
-  6. Crie um novo `Pull Request` _(PR)_
+   6. Create a new `Pull Request` _(PR)_
 
-- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-025-b-project-delivery-app/pulls)
-- Clique no botão verde _"New pull request"_
-- Clique na caixa de seleção _"Compare"_ e escolha a branch do grupo, `main-group-XX`, e a sua branch **com atenção**
-- Coloque um título para a sua _Pull Request_
-  - Exemplo: _"[GRUPO XX] Cria tela de busca"_
-- Clique no botão verde _"Create pull request"_
-- Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-- **Não se preocupe em preencher mais nada por enquanto!**
-- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-025-b-project-delivery-app/pulls) e confira que o seu _Pull Request_ está criado
+- Go to the [GitHub repository](https://github.com/tryber/sd-025-b-project-delivery-app/pulls) _Pull Requests_ page
+- Click on the green _"New pull request"_ button
+- Click on the _"Compare"_ checkbox and choose the group branch, `main-group-XX`, and your branch **carefully**
+- Put a title for your _Pull Request_
+   - Example: _"[GROUP XX] Create search screen"_
+- Click on the green _"Create pull request"_ button
+- Add a description for the _Pull Request_ and click the green _"Create pull request"_ button
+- **Don't worry about filling out anything else for now!**
+- Go back to the [repository's _Pull Requests_ page](https://github.com/tryber/sd-025-b-project-delivery-app/pulls) and check that your _Pull Request_ is created
 
-  7. Assim que aprovado por pelo menos duas pessoas do seu grupo e com o _Linter_ adereçado, acesse **SEU** _Pull Request_ e clique no botão _"Merge pull request"_
-
-</details>
-
-<details>
-  <summary>
-    <strong>⌨️ Durante o desenvolvimento</strong>
-  </summary><br>
-
-- Faça `commits` das alterações que você realizar no código regularmente;
-
-- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto;
-
-- Os comandos que você utilizará com mais frequência são:
-    1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-    2. `git add` _(para adicionar arquivos ao stage do Git)_
-    3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-    4. `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-    5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
+7. Once approved by at least two people in your group and with _Linter_ approved, access **YOUR** _Pull Request_ and click on the _"Merge pull request"_ button
 
 </details>
 
 <details>
-  <summary>
-    <strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong>
-  </summary><br>
+   <summary>
+     <strong>⌨️ During development</strong>
+   </summary><br>
 
-  Para sinalizar que o seu projeto está pronto para _"Code Review"_, faça o seguinte:
+- Make `commits` of the changes you make to the code regularly;
 
-- Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+- Remember to always update the remote repository after one (or a few) `commits`;
 
-  - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-025-b`.
-
-  Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-</details>
-
-<details>
-  <summary>
-    <strong>🕵🏿 Revisando um pull request</strong>
-  </summary><br>
-
-  Use o conteúdo sobre [Code Review](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/b3af2f05-08e5-4b4a-9667-6f5f729c351d/lesson/36268865-fc46-40c7-92bf-cbded9af9006) para te ajudar a revisar os _Pull Requests_.
+- The commands you will use most frequently are:
+     1. `git status` _(to check what is in red - out of stage - and what is in green - on stage)_
+     2. `git add` _(to add files to the Git stage)_
+     3. `git commit` _(to create a commit with the files that are in the Git stage)_
+     4. `git push -u origin branch-name` _(to push the commit to the remote repository the first time you `push` a new branch)_
+     5. `git push` _(to push the commit to the remote repository after the previous step)_
 
 </details>
 
 <details>
-  <summary>
-    <strong>🪛 Scripts relevantes do <code>package.json</code> principal</strong>
-  </summary><br>
+   <summary>
+     <strong>🤝 After finishing development (optional)</strong>
+   </summary><br>
 
-  **Observação:** nesse projeto, utilizamos o gerenciador de processos `pm2`. Caso você queira entender melhor o que são gerenciadores de processos Node, dê uma conferida [nesse link](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/c2647acd-7619-4c8a-a7d8-13b452281c35/lesson/99c92a3a-8b45-4428-8ed6-c1c8a7ffdeac).
+   To signal that your project is ready for _"Code Review"_, do the following:
 
-  **São os scripts da raiz do projeto (`./package.json`) e não das aplicações individuais `./front-end/package.json` e `./back-end/package.json`**:
+- Go to the **YOUR** _Pull Request_ page, add the _"code-review"_ label and tag your colleagues:
 
-- `start`: Limpa as portas `3000` e `3001` e simula a inicialização no avaliador. Também prepara o campo rodando o `Sequelize` para restaurar o **banco de dados de testes** (final `-test`) e sobe a aplicação com `pm2` em modo `fork` (uma instância para cada aplicação). Nesse modo, as alterações não são assistidas;
-  - *uso (na raiz do projeto): `npm start`*
+   - In the menu on the right, click on the _link_ **"Labels"** and choose the _label_ **code-review**;
 
-- `stop`: Para e deleta as aplicações rodando no `pm2`;
-  - *uso (na raiz do projeto): `npm stop`*
+   - In the menu on the right, click on the _link_ **"Assignees"** and choose **your username**;
 
-- `dev`: Limpa as portas `3000` e `3001` e sobe a aplicação com `pm2` em modo `fork` (uma instância pra cada aplicação). Nesse modo, as atualizações são assistidas (modo `watch`);
-  - *uso (na raiz do projeto): `npm run dev`*
+   - In the menu on the right, click on the _link_ **"Reviewers"** and type `students`, select the team `tryber/students-sd-025-b`.
 
-- `dev:prestart`: A partir da raiz, esse comando faz o processo de instalação de dependências (`npm i`) nos dois projetos (`./front-end` e `./back-end`) e roda o `Sequelize` no `./back-end` (lembrar de configurar o `.env` no mesmo);
-  - *uso (na raiz do projeto): `npm run dev:prestart`*
-
-- `db:reset`: Roda os scripts do `Sequelize` restaurando o **banco de dados de desenvolvimento** (final `-dev`). Utilize esse script caso ocorra algum problema no seu banco local;
-  - *uso (na raiz do projeto): `npm run db:reset`*
-
-- `db:reset:debug`: Roda os scripts do `Sequelize` restaurando o **banco de dados de desenvolvimento** (final `-dev`). Utilize esse script caso ocorra algum problema no seu banco local. Esse comando também é capaz de retornar informações detalhadas de erros (quando ocorrerem no processo);
-  - *uso (na raiz do projeto): `npm run db:reset:debug`*
-
-- `test <nomes-dos-arquivos>`: Roda todos os testes (ou uma parte deles caso `<nomes-dos-arquivos>` seja definido) utilizando o **banco de dados de testes** (final `-test`);
-  - *uso (na raiz do projeto): `npm test`, `npm test 01login 02register` ou ainda `npm run test 01 02`*
-
-- `test:dev <nomes-dos-arquivos>`: Roda todos os testes (ou uma parte deles caso `<nomes-dos-arquivos>` seja definido) utilizando o **banco de dados de desenvolvimento** (final `-dev`);
-  - *uso (na raiz do projeto): `npm run test:dev`, `npm run test:dev 01login 02register` ou ainda `npm test:dev 01 02`*;
-
-- `test:dev:open <nomes-dos-arquivos>`: Roda todos os testes (ou uma parte deles caso `<nomes-dos-arquivos>` seja definido) utilizando o **banco de dados de desenvolvimento** (final `-dev`), exemplo `npm test:dev:open 01login 02register` ou ainda `npm test:dev:open 01 02`. Esse teste deve abrir uma janela mostrando o comportamento das páginas;
-  - *uso (na raiz do projeto): `npm run test:dev:open`, `npm run test:dev:open 01login 02register` ou ainda `npm test:dev:open 01 02`*;
-
-- `test:dev:report "<nomes-dos-arquivos>"`: Roda todos os testes (ou uma parte deles caso `"<nomes-dos-arquivos>"` seja definido) utilizando o **banco de dados de desenvolvimento** (final `-dev`). Esse teste devolve um output em texto com o resultado de todos os testes. Os `logs` são gerados em `./__tests__/reports`.
-  - *uso (na raiz do projeto): `npm run test:dev:report`, `npm run test:dev:report "01login 02register"` ou ainda `npm run test:dev:report "01 02"`*;
+   If you have any questions, [here is an explanatory video](https://vimeo.com/362189205).
 
 </details>
 
 <details>
-  <summary>
-    <strong>🎛 Linter</strong>
-  </summary><br>
+   <summary>
+     <strong>🕵🏿 Reviewing a pull request</strong>
+   </summary><br>
 
-## ESLint
+   Use the content about [Code Review](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/b3af2f05-08e5 -4b4a-9667-6f5f729c351d/lesson/36268865-fc46-40c7-92bf-cbded9af9006) to help you review _Pull Requests_.
 
-  Para fazer a análise estática do seu código neste projeto, vamos utilizar o linter [ESLint](https://eslint.org/). Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção!
+</details>
 
-  ➡️ Este projeto já vem com as dependências relacionadas ao _linter_ configuradas nos arquivos `package.json` nos seguintes caminhos:
-    - `sd-025-b-project-delivery-app/back-end/package.json`
-    - `sd-025-b-project-delivery-app/front-end/package.json`
+<details>
+   <summary>
+     <strong>🪛 Relevant scripts from main <code>package.json</code></strong>
+   </summary><br>
 
-  ➡️ Para poder rodar o `ESLint` basta:
+   **Note:** in this project, we use the `pm2` process manager. If you want to better understand what Node process managers are, check out [this link](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e -4588-8950-3b1a29afd2dd/section/c2647acd-7619-4c8a-a7d8-13b452281c35/lesson/99c92a3a-8b45-4428-8ed6-c1c8a7ffdeac).
 
-- Executar o comando `npm install` dentro do projeto, de forma individual, ou seja, execute esse comando dentro da pasta `back-end` e também na pasta `front-end`;
+   **These are the scripts from the project root (`./package.json`) and not from the individual applications `./front-end/package.json` and `./back-end/package.json`**:
+   
+   - `start`: Cleans ports `3000` and `3001` and simulates initialization in the evaluator. It also prepares the field by running `Sequelize` to restore the **test database** (final `-test`) and uploads the application with `pm2` in `fork` mode (one instance for each application). In this mode, changes are not watched;
+   - *use (in the project root): `npm start`*
 
-- Depois execute o comando `npm run lint` dentro de cada uma dessas pastas, assim você verifica as particularidades individualmente;
+- `stop`: Stop and delete applications running in `pm2`;
+   - *use (in the project root): `npm stop`*
 
-- Se a análise do `ESLint` encontrar problemas no seu código, eles serão mostrados no seu terminal.
-- Se não houver problema no seu código, nada será impresso no seu terminal.
+- `dev`: Cleans ports `3000` and `3001` and uploads the application with `pm2` in `fork` mode (one instance for each application). In this mode, updates are watched (`watch` mode);
+   - *usage (in the project root): `npm run dev`*
 
-- Você pode também instalar o plugin do `ESLint` no `VSCode`. Para isso, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+- `dev:prestart`: From the root, this command performs the process of installing dependencies (`npm i`) in both projects (`./front-end` and `./back-end`) and runs the `Sequelize` in `./back-end` (remember to configure `.env` in it);
+   - *usage (in the project root): `npm run dev:prestart`*
+
+- `db:reset`: Run the `Sequelize` scripts restoring the **development database** (final `-dev`). Use this script if there is a problem at your local bank;
+   - *usage (in the project root): `npm run db:reset`*
+
+- `db:reset:debug`: Runs the `Sequelize` scripts restoring the **development database** (final `-dev`). Use this script if there is a problem at your local bank. This command is also capable of returning detailed error information (when they occur in the process);
+   - *usage (in the project root): `npm run db:reset:debug`*
+
+- `test <filenames>`: Runs all tests (or a part of them if `<filenames>` is defined) using the **test database** (final `-test `);
+   - *use (in the project root): `npm test`, `npm test 01login 02register` or `npm run test 01 02`*
+
+- `test:dev <filenames>`: Runs all tests (or a part of them if `<filenames>` is defined) using the **development database** (final ` -dev`);
+   - *use (in the project root): `npm run test:dev`, `npm run test:dev 01login 02register` or `npm test:dev 01 02`*;
+
+- `test:dev:open <filenames>`: Runs all tests (or a part of them if `<filenames>` is defined) using the **development database** ( final `-dev`), example `npm test:dev:open 01login 02register` or `npm test:dev:open 01 02`. This test should open a window showing the behavior of the pages;
+   - *use (in the project root): `npm run test:dev:open`, `npm run test:dev:open 01login 02register` or `npm test:dev:open 01 02`*;
+
+- `test:dev:report "<filenames>"`: Runs all tests (or a part of them if `"<filenames>"` is defined) using the **database development** (final `-dev`). This test returns a text output with the results of all tests. `logs` are generated in `./__tests__/reports`.
+   - *use (in the project root): `npm run test:dev:report`, `npm run test:dev:report "01login 02register"` or `npm run test:dev:report "01 02"`*;
+
+</details>
+
+<details>
+   <summary>
+     <strong>🎛 Linter</strong>
+   </summary><br>
+
+##ESLint
+
+   To perform static analysis of your code in this project, we will use the [ESLint](https://eslint.org/) linter. This way the code will be aligned with good development practices, being more readable and easier to maintain!
+
+   ➡️ This project already comes with dependencies related to _linter_ configured in the `package.json` files in the following paths:
+     - `sd-025-b-project-delivery-app/back-end/package.json`
+     - `sd-025-b-project-delivery-app/front-end/package.json`
+
+   ➡️ To be able to run `ESLint` simply:
+
+- Run the `npm install` command within the project, individually, that is, run this command within the `back-end` folder and also in the `front-end` folder;
+
+- Then run the `npm run lint` command within each of these folders, so you can check the particularities individually;
+
+- If `ESLint` analysis finds problems in your code, they will be shown in your terminal.
+- If there is no problem in your code, nothing will be printed on your terminal.
+
+- You can also install the `ESLint` plugin in `VSCode`. To do this, just go to extensions and download the [`ESLint` plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
   
-  👀 **De olho na dica**: abra separadamente cada pasta do projeto (`back-end` e `front-end` em VSCodes separados, para tirar proveito do `ESLint` individual de cada projeto).
+   👀 **Keep an eye on the tip**: open each project folder separately (`back-end` and `front-end` in separate VSCodes, to take advantage of each project's individual `ESLint`).
 
-  ⚠️ **Importante**: Devido ao fato de as configurações das regras do `ESLint` dos projetos de front e back serem diferentes, é preciso executar o `ESLint` em cada projeto.
+   ⚠️ **Important**: Due to the fact that the `ESLint` rule configurations of the front and back projects are different, it is necessary to run `ESLint` in each project.
 
 ## StyleLint
 
-  ➡️ Usaremos também o [StyleLint](https://stylelint.io/) para fazer a análise estática do seu código, especialmente em Front-end.
+➡️ We will also use [StyleLint](https://stylelint.io/) to carry out static analysis of your code, especially in Front-end.
 
-  ➡️ Para poder rodar o `StyleLint` em um projeto basta:
+   ➡️ To be able to run `StyleLint` in a project, simply:
 
-- Executar o comando `npm install` dentro do projeto de front-end;
+- Run the `npm install` command within the front-end project;
 
-- Depois execute o comando `npm run lint:styles`;
+- Then run the command `npm run lint:styles`;
 
-- Se a análise do `StyleLint` encontrar problemas no seu código, tais problemas serão mostrados no seu terminal;
-- Se não houver problema no seu código, nada será impresso no seu terminal.
+- If `StyleLint` analysis finds problems in your code, such problems will be shown in your terminal;
+- If there is no problem in your code, nothing will be printed on your terminal.
 
-  ➡️ Caso ainda fique alguma dúvida, você pode consultar nosso conteúdo sobre [`ESLint`](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/3b1546b5-f7bc-40f7-a674-77b16c408756/lesson/0c9e8c0e-24c3-4526-ba6b-60d95913e022)
+   ➡️ If you still have any questions, you can consult our content on [`ESLint`](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588 -8950-3b1a29afd2dd/section/3b1546b5-f7bc-40f7-a674-77b16c408756/lesson/0c9e8c0e-24c3-4526-ba6b-60d95913e022)
 
-  ⚠️ **Importante**: o Stylelint é aplicável apenas no front-end.
+   ⚠️ **Important**: Stylelint is only applicable on the front-end.
 
-  > ⚠️ **Importante**: Pull Requests com issues de Linter não serão avaliadas. Atente-se para resolvê-las antes de finalizar o desenvolvimento.
-
-</details>
-
-<details>
-  <summary>
-    <strong>🛠 Testes</strong>
-  </summary><br>
-
-  **⚠️ Atenção: O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?**
-
-</details>
+   > ⚠️ **Important**: Pull Requests with Linter issues will not be evaluated. Be careful to resolve them before finalizing the development.
 
 </details>
 
 <details>
-  <summary>
-    <strong>🏦 Banco de dados e Sequelize</strong>
-  </summary><br>
+   <summary>
+     <strong>🛠 Tests</strong>
+   </summary><br>
 
-## Banco de dados
+   **⚠️ Attention: The automatic evaluator does not necessarily evaluate your project in the order in which the requirements appear in the readme. This is to make the evaluation process faster. So don't be alarmed if this happens, okay?**
 
-  Para o banco de dados, utilizaremos o ORM `Sequelize`, que fará interface com o `MySQL`. Para isso, atente-se às seguintes orientações:
+</details>
 
-- Utilize para referência de criação de `migrations` e `seeders` o arquivo `./db.example.sql`;
-- O [Diagrama de ER](./assets/readme/erdr.png) também pode ajudar a "visualizar" o banco de dados;
-- Respeite a estrutura do banco de dados, ou seja, sua implementação **não deve** adicionar ou remover tabelas, campos ou relacionamentos e sua API deve estar preparada para aproveitar essa estrutura por completo.
+</details>
+
+<details>
+   <summary>
+     <strong>🏦 Database and Sequelize</strong>
+   </summary><br>
+
+## Database
+
+   For the database, we will use the `Sequelize` ORM, which will interface with `MySQL`. To do this, pay attention to the following guidelines:
+
+- Use the file `./db.example.sql` for reference when creating `migrations` and `seeders`;
+- [ER Diagram](./assets/readme/erdr.png) can also help to "visualize" the database;
+- Respect the database structure, that is, your implementation **should not** add or remove tables, fields or relationships and your API must be prepared to take full advantage of this structure.
 
 ## Sequelize
 
-  ⚠️ **A configuração do sequelize pode ser considerado o requisito zero do projeto**, dado que a maior parte dos testes dependem da estrutura de alguma tabela para realização de testes, **portanto, deve ser feita primeiro**.
+   ⚠️ **Sequelize configuration can be considered the zero requirement of the project**, given that most tests depend on the structure of some table for testing, **therefore, it must be done first**.
 
-  ⚠️ Antes de iniciar o projeto, garanta que o Sequelize roda corretamente no `./back-end` (pela raiz do projeto, o comando `npm run db:reset` será de grande ajuda, pois serve para restaurar o banco de dados `-dev`). O avaliador vai executar funções do sequelize para garantir a estrutura do banco de dados.
+   ⚠️ Before starting the project, ensure that Sequelize runs correctly in `./back-end` (at the root of the project, the command `npm run db:reset` will be of great help, as it is used to restore the database ` -dev`). The evaluator will execute sequelize functions to ensure the database structure.
 
-  O projeto já provê uma estrutura inicializada do ORM (em `./back-end/src/database`). Aqui, é necessário que você desenvolva as **migrations** e **seeders** corretamente, seguindo o modelo em `./db.example.sql` (esse arquivo serve como referência, e não tem qualquer influência sobre a aplicação ou avaliação).
+   The project already provides an initialized ORM structure (in `./back-end/src/database`). Here, it is necessary that you develop the **migrations** and **seeders** correctly, following the model in `./db.example.sql` (this file serves as a reference, and has no influence on the application or assessment).
 
-  ⚠️ O avaliador usará valores `default` no arquivo `./back-end/src/database/config/config.js`, que já vem no projeto caso nada seja definido. Portanto, tome cuidado na hora de fazer qualquer alteração nesse arquivo, pois é através dele que o avaliador utilizará as referências do banco de dados correto para cada situação (desenvolvimento e testes).
+   ⚠️ The evaluator will use `default` values in the file `./back-end/src/database/config/config.js`, which is already included in the project if nothing is defined. Therefore, be careful when making any changes to this file, as it is through this file that the evaluator will use the correct database references for each situation (development and testing).
 
-- Esse projeto fornece por padrão o arquivo `.sequelizerc` em `.back-end` para configurações do padrão de pastas no Sequelize.
+- This project provides by default the `.sequelizerc` file in `.back-end` for folder pattern settings in Sequelize.
 
-- **Opcionalmente no desenvolvimento local, você pode alterar o valor `EVAL_ALWAYS_RESTORE_DEV_DB` do arquivo `.env` em `./back-end` para `false`**, o que persistirá os dados dos testes locais durante os mesmos. Essa opção pode gerar implicações para a performance e confiabilidade do teste local, já que o avaliador pode se comportar mal caso haja uma quantidade grande de registros para avaliar. Caso ocorra algum problema, utilize o comando `npm run db:reset` ou `npm run db:reset:debug` (para encontrar erros) pela raiz do projeto para restaurar o banco, ou altere de volta a opção `EVAL_ALWAYS_RESTORE_DEV_DB` para `true`.
+- **Optionally in local development, you can change the `EVAL_ALWAYS_RESTORE_DEV_DB` value of the `.env` file in `./back-end` to `false`**, which will persist local test data throughout the test. This option can have implications for the performance and reliability of the local test, as the evaluator may behave badly if there is a large number of records to evaluate. If a problem occurs, use the command `npm run db:reset` or `npm run db:reset:debug` (to find errors) from the project root to restore the database, or change the `EVAL_ALWAYS_RESTORE_DEV_DB` option back to ` true`.
 
 </details>
 
 <details>
-  <summary>
-    <strong>🏗️ Preparando o campo e iniciando o projeto</strong>
-  </summary><br>
 
-- ⚠️ O projeto só instala as dependências com a versão 16 do `node` para evitar conflitos de versão, caso não tenha essa versão instalada você pode usar o [`nvm`](https://github.com/nvm-sh/nvm#installing-and-updating) para fazer o gerenciamento de versões.
+summary>
+     <strong>🏗️ Preparing the field and starting the project</strong>
+   </summary><br>
 
-- ⚠️ O processo de avaliação completo é bem demorado (em torno de 20 minutos), por isso, **é importante que os testes sejam feitos por partes, localmente, antes de serem enviados para o avaliador!**. Para isso, utilize os comandos de teste local (`npm run test:dev*`) apresentados em scripts relevantes do `package.json` principal!
+- ⚠️ The project only installs dependencies with version 16 of `node` to avoid version conflicts, if you don't have this version installed you can use [`nvm`](https://github.com/nvm-sh/ nvm#installing-and-updating) to manage versions.
 
-    ▶️ Exemplo: Após terminar os requisitos do primeiro arquivo (`01login.test.js`), você pode utilizar o comando `npm run test:dev 01` ou `npm run test:dev:open 01`(caso queira visualizar) para testar aquela parte do projeto.
+- ⚠️ The complete evaluation process is quite time-consuming (around 20 minutes), so **it is important that the tests are carried out in parts, locally, before being sent to the evaluator!**. To do this, use the local test commands (`npm run test:dev*`) presented in relevant scripts of the main `package.json`!
 
-    ▶️ Aqui, vocês também tem liberdade para utilizar os comandos `.only` ou `.skip` para validar testes específicos no avaliador local (pasta `./__tests__/end-to-end`), exemplo:
+     ▶️ Example: After finishing the requirements of the first file (`01login.test.js`), you can use the command `npm run test:dev 01` or `npm run test:dev:open 01` (if you want to view) to test that part of the project.
+
+     ▶️ Here, you are also free to use the `.only` or `.skip` commands to validate specific tests in the local evaluator (`./__tests__/end-to-end` folder), example:
 
 ```js script
 /*
   
- - ⚠️ **IMPORTANTE**: esse artifício **não deve ser "commitado" com o projeto, sob risco de desqualificação na avaliação**, porém pode ser utilizado para ganhar tempo no teste local.
+  - ⚠️ **IMPORTANT**: this device **should not be "committed" to the project, at risk of disqualification in the evaluation**, but it can be used to save time in the local test.
 */
 
 describe(requirement(1), () => {
-  test.only("O avaliador navegará para o endereço do host utilizando o endpoint '/'", async () => { // O `test.only` deve rodar o teste específico do requisito 1 e pular os demais
-    // ...
-  });
+   test.only("The evaluator will navigate to the host address using the '/' endpoint", async () => { // `test.only` must run the specific test for requirement 1 and skip the others
+     // ...
+   });
 });
 ```
 
-- ⚠️ **Para testes locais, é fundamental configurar o arquivo de variáveis de ambiente `.env` (de `environment`) dentro da pasta `./back-end`** (ele é o único `.env` no projeto), conforme exemplo em `.env.example`, na mesma pasta. Esse arquivo servirá de referência para o avaliador e caso não exista, o avaliador vai utilizar valores `default` para o processo (O que pode estourar erro no teste local, caso suas configurações não sejam as mesmas).
+- ⚠️ **For local tests, it is essential to configure the environment variables file `.env` (from `environment`) inside the `./back-end`** folder (it is the only `.env` in the project ), as per the example in `.env.example`, in the same folder. This file will serve as a reference for the evaluator and if it does not exist, the evaluator will use `default` values for the process (Which may cause an error in the local test, if its settings are not the same).
 
-- ⚠️ **Excepcionalmente nesse projeto, existe a necessidade de manter e subir para o repositório o arquivo `jwt.evaluation.key`, que também deve estar em `./back-end`**. Esse arquivo deve conter única e exclusivamente a chave utilizada para criptografia com JWT, que também vai ser testado pelo avaliador. Nesse sentido, esse arquivo pode ser lido por sua aplicação na hora de trabalhar com `tokens`.
+- ⚠️ **Exceptionally in this project, there is a need to maintain and upload the `jwt.evaluation.key` file to the repository, which must also be in `./back-end`**. This file must contain solely and exclusively the key used for encryption with JWT, which will also be tested by the evaluator. In this sense, this file can be read by your application when working with `tokens`.
 
-- ⚠️ **Inicie o projeto pela raiz, utilizando o comando `npm i`**. Após isso, é possível fazer a instalação de ambos os aplicativos (back e front) através da raiz do projeto, utilizando o comando `npm run dev:prestart` (esse comando também restaurará o banco de dados, caso o `.env` esteja configurado corretamente).
+- ⚠️ **Start the project from the root, using the `npm i`** command. After that, it is possible to install both applications (back and front) through the project root, using the command `npm run dev:prestart` (this command will also restore the database, if `.env` is correctly configured).
 
 </details>
 
 <details>
-  <summary>
-    <strong> ℹ️ Data-testids do Projeto</strong>
-  </summary><br>
+   <summary>
+     <strong> ℹ️ Project Data-testids</strong>
+   </summary><br>
 
-  Se atente aos seguintes pontos:
+   Pay attention to the following points:
 
-- O `data-testid` de cada elemento que será usado na avaliação do projeto está no arquivo [data-testids.txt](data-testids.txt) na raiz do projeto.
-- No [protótipo do figma](#construcao-do-front-end-e-componentizacao), existe um número nos elementos associados aos `data-testids`. Você pode, pelo protótipo, identificar o número e depois buscar no arquivo [data-testids.txt](data-testids.txt) pelo `data-testid` correspondente, [como no exemplo](./assets/readme/data-test-figma-txt.png).
-- ⚠️ **Atenção:** Para passar no avaliador, as `strings` que formam cada `data-testid` não podem quebrar linha, nem mesmo em templates literals. Uma sugestão é criar constantes para partes da string e depois concatená-las, como no exemplo:
+- The `data-testid` of each element that will be used in the project evaluation is in the file [data-testids.txt](data-testids.txt) in the project root.
+- In [figma prototype](#construcao-do-front-end-e-componentizacao), there is a number in the elements associated with `data-testids`. You can, through the prototype, identify the number and then search the file [data-testids.txt](data-testids.txt) for the corresponding `data-testid`, [as in the example](./assets/readme/data- test-figma-txt.png).
+- ⚠️ **Attention:** To pass the evaluator, the `strings` that form each `data-testid` cannot break lines, not even in literal templates. One suggestion is to create constants for parts of the string and then concatenate them, as in the example:
 
-    ```js script
+     ```js script
     
-    const ROUTE = 'customer_products';
-    const ELEMENT = 'element-navbar-link-products';
+     const ROUTE = 'customer_products';
+     const ELEMENT = 'element-navbar-link-products';
 
-    <p data-testid={ `${ROUTE}__${ELEMENT}` }>Exemplo</p>
-    ```
+     <p data-testid={ `${ROUTE}__${ELEMENT}` }>Example</p>
+     ```
 
-  👀 **De olho na dica**: você pode ler mais sobre os atributos `data-*` [neste link](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes).
+   👀 **Keep an eye on the tip**: you can read more about the `data-*` attributes [in this link](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes ).
 
 </details>
 
 <details>
-  <summary>
-    <strong>👷 Estruturação do projeto</strong>
-  </summary><br>
+   <summary>
+     <strong>👷 Project structuring</strong>
+   </summary><br>
+   
+   To facilitate understanding, we can divide the application into **4 main flows**, **a status validation between customer and sales person** and **test coverage (`front-end` and `back-end`) **:
 
-  Para facilitar o entendimento, podemos dividir a aplicação em **4 fluxos principais**, **uma validação de status entre cliente e pessoa vendedora** e **cobertura de testes (`front-end` e `back-end`)**:
+- **Common Flow** which comprises:
+   - (1) Login Screen (`01login.test`);
+   - (2) Registration Screen (`02register.test`).
 
-- **Fluxo Comum** que compreende:
-  - (1) Tela de Login (`01login.test`);
-  - (2) Tela de Registro (`02register.test`).
+- **Customer Flow** which includes:
+   - (3) Products Screen (`03customer_products.test`);
+   - (4) Checkout Screen (`04customer_checkout.test`);
+   - (5) Orders Screen (`05customer_orders.test`);
+   - (6) Order Details Screen (`06customer_order_details.test`).
 
-- **Fluxo do Cliente** que compreende: :
-  - (3) Tela de Produtos (`03customer_products.test`);
-  - (4) Tela de Checkout (`04customer_checkout.test`);
-  - (5) Tela de Pedidos (`05customer_orders.test`);
-  - (6) Tela de Detalhes do Pedido (`06customer_order_details.test`).
+- **Selling Person Flow** which comprises:
+   - (7) Orders Screen (`07seller_orders.test`);
+   - (8) Order Details/Control Screen (`08seller_order_details.test`).
 
-- **Fluxo da Pessoa Vendedora** que compreende:
-  - (7) Tela de Pedidos (`07seller_orders.test`);
-  - (8) Tela de Detalhes/Controle do Pedido (`08seller_order_details.test`).
+- **Order Status Validation** which includes:
+   - (9) Status test (`09customer_seller_status_sync.test`);
 
-- **Validação do Status do Pedido** que compreende:
-  - (9) Teste de status (`09customer_seller_status_sync.test`);
+- **Administrator Person Flow** which comprises:
+   - (10) User management screen (`11admin_manage_users.test`).
 
-- **Fluxo da Pessoa Administradora** que compreende:
-  - (10) Tela de gerenciamento de usuários (`11admin_manage_users.test`).
+- **Application tests** which includes:
+   - (11) Coverage tests (`12coverage_tests.test`).
 
-- **Testes da aplicação** que compreende:
-  - (11) Testes de cobertura (`12coverage_tests.test`).
-
-- ⚠️ **Importante** ⚠️: a tela de login deve ser capaz de direcionar para a tela principal de cada pessoa usuária, sendo as páginas:
-  - Do cliente: `/customer/products`,
-  - Da pessoa vendedora:  `/seller/orders`,
-  - Da pessoa administradora: `/admin/manage`
+- ⚠️ **Important** ⚠️: the login screen must be able to direct to the main screen of each user, the pages being:
+   - From customer: `/customer/products`,
+   - From the seller: `/seller/orders`,
+   - From the administrator: `/admin/manage`
 
 </details>
 
 <details id="construcao-do-front-end-e-componentizacao">
-  <summary>
-    <strong>🎨 Construção do Front-end e Componentização</strong>
-  </summary><br>
+   <summary>
+     <strong>🎨 Front-end Construction and Componentization</strong>
+   </summary><br>
 
-## Construção do Front-end
+## Front-end construction
 
-- Utilize o arquivo [`prototype.fig`](./prototype.fig) contido na raiz do projeto para se guiar na construção do front-end. Se trata de um arquivo do Figma que contém um layout base e os data-testids de cada elemento.
+- Use the file [`prototype.fig`](./prototype.fig) contained in the root of the project to guide you in building the front-end. This is a Figma file that contains a base layout and the data-testids for each element.
 
-  ⚠️**Importante**: para visualizar o protótipo, é necessário fazer login no [Figma](https://www.figma.com/) e importar o arquivo. Os data-testids estão dispostos nos balões. Caso queira ocultá-los para visualizar o protótipo de forma limpa, você pode esconder a camada `data-testids` clicando no ícone de "olho" ao lado do nome dela. Em caso de dúvidas, confira as imagens abaixo:
+   ⚠️**Important**: to view the prototype, you must log in to [Figma](https://www.figma.com/) and import the file. The data-testids are arranged in the balloons. If you want to hide them to view the prototype cleanly, you can hide the `data-testids` layer by clicking the "eye" icon next to its name. If you have any questions, check out the images below:
 
-  ![Importar aquivo](figma-import.png)
+   ![Import file](figma-import.png)
 
-  ![Esconder camada](figma-hide-layer.png)
+   ![Hide layer](figma-hide-layer.png)
 
-- Para servir arquivos estáticos como imagens no back-end, utilize o seguinte path:`./back-end/public`;
-- ⚠️**Importante**: nosso banco de imagens pode ser [baixado aqui](./assets/images.zip);
+- To serve static files as images in the back-end, use the following path:`./back-end/public`;
+- ⚠️**Important**: our image bank can be [downloaded here](./assets/images.zip);
 
-## Componentização
+## Componentization
 
-  O nosso **protótipo** possui um conjunto de **componentes base**. Isso é proposital e sugere que é fundamental que vocês componentizem o front-end de maneira que seja possível fazer o maior reaproveitamento possível de cada estrutura.
+   Our **prototype** has a set of **base components**. This is on purpose and suggests that it is essential that you componentize the front-end in such a way that it is possible to make the greatest possible reuse of each structure.
 
-  É bom lembrar que **um front-end em React com pouca componentização gera muita manutenção no tempo e atrasa a entrega**. Aqui, é aconselhável pensar utilizando um [modelo atômico](https://brasil.uxdesign.cc/atomic-design-redesenhando-os-entreg%C3%A1veis-de-designers-e-desenvolvedores-da8886c7258d) de desenvolvimento.
-
-</details>
-
-<details>
-  <summary>
-    <strong>🤲 Escrevendo seus testes</strong>
-  </summary>
-  
-- ⚠️ O projeto avaliará separadamente a cobertura de testes da aplicação _front-end_ e da aplicação _back-end_, ou seja, é necessário implementar os arquivos de testes de cada parte da aplicação, tanto _front-end_ quanto _back-end_.
-- Esse projeto não avalia o tipo de teste implementado, ou seja, se é _teste unitário_ ou _teste de integração_. Ambos se aplicam ao projeto, e fica a critério de cada grupo ou indivíduo decidir qual tipo de teste aplicar, inclusive podendo usar os dois complementarmente. Portanto os testes avaliativos apenas medirão a cobertura (_coverage_) por quantidade de linhas e porcentagem.
-- Escreva testes unitários e sinta-se livre para alterar a UI. Contudo, respeite os atributos `data-testid`, pois eles serão usados na correção do projeto.
-  
-</details>
-  
-<details>
-  <summary>
-    <strong>⚠️ Upload de arquivos</strong>
-  </summary>
-
-- Caso necessite realizar upload de algum arquivo/imagem, pode utilizar a ferramenta/tecnologia de sua preferência, ressaltamos aqui:
-  - [Express Static](https://expressjs.com/pt-br/starter/static-files.html), uma ferramenta simples e prática, já integrada ao express para servir arquivos estáticos.
-  - Multer, uma ferramenta mais completa sobre a qual temos um conteúdo na parte de [Real Life Engineer](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/2b8cf38c-5587-4e1d-9778-9083ed02d3f2/lesson/2300b1ee-d7d9-40f1-8d0d-67c4b3cd725b).
+   It's good to remember that **a front-end in React with little componentization generates a lot of maintenance over time and delays delivery**. Here, it is advisable to think using an [atomic model](https://brasil.uxdesign.cc/atomic-design-redesenhando-os-entreg%C3%A1veis-de-designers-e-desenvolvedores-da8886c7258d) of development.
 
 </details>
 
 <details>
-  <summary>
-    <strong>🔄 Persistência no LocalStorage</strong>
-  </summary>
+   <summary>
+     <strong>🤲 Writing your tests</strong>
+   </summary>
   
-  - Para persistir informações como produtos no carrinho, considere:
-    - Se estiver utilizando o [redux](https://redux.js.org/), utilizar o [redux-persist](https://github.com/rt2zz/redux-persist), uma biblioteca que persiste o estado da sua aplicação no localStorage automagicamente.
-    - Se estiver utilizando o [context](https://reactjs.org/docs/context.html), criar um hook customizado para isolar a lógica de persistência do restante do seu código, como é sugerido [nesse artigo](https://jdudzik.medium.com/persistent-data-with-react-hooks-and-context-api-3f3f18ce947). Você pode encontrar diferentes sugestões e estratégias pesquisando por algo como: `react context persist`.
+- ⚠️ The project will separately evaluate the test coverage of the _front-end_ application and the _back-end_ application, that is, it is necessary to implement the test files for each part of the application, both _front-end_ and _back-end_.
+- This project does not evaluate the type of test implemented, that is, whether it is _unit test_ or _integration test_. Both apply to the project, and it is up to each group or individual to decide which type of test to apply, and they can even use the two complementaryly. Therefore, evaluative tests will only measure coverage (_coverage_) by number of lines and percentage.
+- Write unit tests and feel free to change the UI. However, respect the `data-testid` attributes, as they will be used to correct the project.
+  
+</details>
+  
+<details>
+   <summary>
+     <strong>⚠️ File upload</strong>
+   </summary>
+
+- If you need to upload a file/image, you can use the tool/technology of your choice, we highlight it here:
+   - [Express Static](https://expressjs.com/pt-br/starter/static-files.html), a simple and practical tool, already integrated with express to serve static files.
+   - Multer, a more complete tool about which we have content in [Real Life Engineer](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21- 382e-4588-8950-3b1a29afd2dd/section/2b8cf38c-5587-4e1d-9778-9083ed02d3f2/lesson/2300b1ee-d7d9-40f1-8d0d-67c4b3cd725b).
+
+</details>
+
+<details>
+
+<summary>
+     <strong>🔄 Persistence in LocalStorage</strong>
+   </summary>
+  
+   - To persist information such as products in the cart, consider:
+     - If you are using [redux](https://redux.js.org/), use [redux-persist](https://github.com/rt2zz/redux-persist), a library that persists the state of your application in localStorage automatically.
+     - If you are using [context](https://reactjs.org/docs/context.html), create a custom hook to isolate the persistence logic from the rest of your code, as suggested [in this article](https: //jdudzik.medium.com/persistent-data-with-react-hooks-and-context-api-3f3f18ce947). You can find different suggestions and strategies by searching for something like: `react context persist`.
   
 </details>
 
 <details>
-  <summary>
-    <strong>🗣 Nos dê feedbacks sobre o projeto!</strong>
-  </summary><br>
+   <summary>
+     <strong>🗣 Give us feedback on the project!</strong>
+   </summary><br>
 
-  Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. **Leva menos de 3 minutos!**
+   When finalizing and submitting the project, don't forget to rate your experience by filling out the form. **Takes less than 3 minutes!**
 
-  Link: [Formulário de avaliação do projeto](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH25-B&template=betrybe/sd-0x-project-delivery-app)
+   Link: [Project evaluation form](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH25-B&template=betrybe/sd-0x-project-delivery-app)
 
 </details>
 
 <details>
-  <summary>
-    <strong>🗂 Compartilhe seu portfólio!</strong>
-  </summary><br>
+   <summary>
+     <strong>🗂 Share your portfolio!</strong>
+   </summary><br>
 
-  Você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
+   Did you know that LinkedIn is the main professional social network and sharing your learning there is very important for anyone who wants to build a successful career? Share this project on your LinkedIn, tag Trybe's profile (@trybe) and show your network its evolution.
 
 </details>
 
-# Requisitos
+# Requirements
 
-## `Fluxo Comum`
+## `Common Flow`
 
-O Fluxo comum deve garantir que seja possível **fazer login** e **registrar** no sistema.
+The Common Flow must ensure that it is possible to **login** and **register** to the system.
 
->⚠️ **Nesse projeto existe o arquivo `back-end/jwt.evaluation.key` que deverá ser lido e usado como o `secret` para realizar a criptografia de _tokens_, dispensando assim, a necessidade de criar uma variável de ambiente para isso.**
+>⚠️ **In this project there is the file `back-end/jwt.evaluation.key` which must be read and used as the `secret` to perform the encryption of _tokens_, thus eliminating the need to create an environment variable to that.**
 
 ---
 
 ### `01login.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Verificarão se o banco de dados contém as pessoas usuárias padrão (conforme referência em `db.example.sql`);
-- Farão a navegação para a página principal em `localhost:3000/login`.
+- They will check if the database contains the standard users (as referenced in `db.example.sql`);
+- They will navigate to the main page at `localhost:3000/login`.
 
 ---
 
-#### 1 - Crie uma tela de login que deve ser acessível pelos endpoints / e /login no navegador
+#### 1 - Create a login screen that must be accessible via the / and /login endpoints in the browser
 
-**Observações técnicas**
+**Technical observations**
 
-- Aqui deve-se garantir que a aplicação possui acesso a uma rota `/login`;
-- A rota padrão (`/`) deve fazer redirecionamento para rota `/login`.
+- Here you must ensure that the application has access to a `/login` route;
+- The default route (`/`) must redirect to the `/login` route.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador navegará para o endereço do host utilizando o endpoint `/`;
-  - O avaliador verificará o redirecionamento para página `/login`;
-- O avaliador navegará para o endereço do host utilizando o endpoint `/login`.
+- The evaluator will navigate to the host address using the `/` endpoint;
+   - The evaluator will check the redirection to the `/login` page;
+- The evaluator will navigate to the host address using the `/login` endpoint.
 
 </details>
 
 ---
 
-#### 2 - Crie os elementos da tela de login com os data-testids disponíveis no protótipo
+#### 2 - Create the login screen elements with the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`Comum / Login`](#construcao-do-front-end-e-componentizacao);
+- Guide yourself through the following prototype screen: [`Comum / Login`](#construcao-do-front-end-e-componentizacao);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador buscará pelos elementos fundamentais aos demais testes.
+- The evaluator will look for the fundamental elements for the other tests.
 
 </details>
 
 ---
 
-#### 3 - Desenvolva a tela de login de maneira que ela impossibilite o login com dados mal formatados
+#### 3 - Design the login screen in such a way that it makes it impossible to log in with poorly formatted data
 
-**Observações técnicas**
+**Technical observations**
 
-- A senha recebe qualquer tipo de caractere;
-- Aqui, os critérios para considerar dados de login **mal formatados** são:
-  - Email incompleto, fora de um padrão comum como: `<email>@<domínioPrincipal>.<domínioGenérico>`;
-  - Senha com número de caracteres menor que `6`.
+- The password can be any type of character;
+- Here, the criteria for considering **poorly formatted** login data are:
+   - Incomplete email, outside a common pattern such as: `<email>@<MainDomain>.<GenericDomain>`;
+   - Password with a number of characters less than `6`.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará 3 situações aleatórias diferentes (uma para cada validação) de maneira isolada, sendo uma delas válida;
-- O avaliador testará seu formulário com as 3 situações de maneira sequencial;
-- O avaliador não vai executar o login pelo botão de login, ele validará se o botão ficará habilitado ou não, a depender dos critérios durante o input dos dados;
-- É esperado que haja a validação dos dados durante a escrita dos mesmos.
+- The evaluator will test 3 different random situations (one for each validation) in isolation, one of which is valid;
+- The evaluator will test your form with the 3 situations sequentially;
+- The evaluator will not log in using the login button, he will validate whether the button will be enabled or not, depending on the criteria during data entry;
+- It is expected that data will be validated during writing.
 
 </details>
 
 ---
 
-#### 4 - Desenvolva a tela de login de maneira que ela impossibilite o login com dados inexistentes no banco de dados
+#### 4 - Design the login screen in such a way that it makes it impossible to log in with non-existent data in the database
 
-**Observações técnicas**
+**Technical observations**
 
-- Sua página deve ser capaz de alertar a pessoa usuária de que aquele login é inválido após sua tentativa, já que apesar de formatado corretamente, os dados não existem no banco de dados.
+- Your page must be able to alert the user that the login is invalid after their attempt, since despite being formatted correctly, the data does not exist in the database.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará fazer login através do botão de login, com dados aleatórios válidos;
-- O avaliador espera que haja uma requisição `POST` para API, que retorne o status `404 - Not found`;
-- O avaliador deve identificar que o endereço da página não foi alterado;
-- O avaliador espera que apareça na tela um elemento, antes oculto, com uma mensagem de erro qualquer.
-  - Elemento: `common_login__element-invalid-email`
+- The evaluator will attempt to log in via the login button, with valid random data;
+- The evaluator expects there to be a `POST` request to the API, which returns the status `404 - Not found`;
+- The evaluator must identify that the page address has not been changed;
+- The evaluator waits for an element, previously hidden, to appear on the screen with some error message.
+   - Element: `common_login__element-invalid-email`
 
 </details>
 
 ---
 
-#### 5 - Desenvolva a tela de login de maneira que ela possibilite fazer o login com dados válidos e existentes no banco de dados
+#### 5 - Develop the login screen so that it makes it possible to log in with valid data that exists in the database
 
-**Observações técnicas**
+**Technical observations**
 
-Sua página deve ser capaz de utilizar os dados do cliente previstos em `db.example.sql`:
+Your page must be able to use the customer data provided in `db.example.sql`:
 
-- Note que, a senha armazenada no banco é uma [`hash md5`](https://pt.wikipedia.org/wiki/MD5), cuja tradução também está comentada no arquivo;
-- Sua API deve ser capaz de traduzir uma senha comum para uma `hash md5`, comparando-a e validando-a com a do banco de dados;
-- É possível utilizar bibliotecas de terceiros como a [`md5`](https://www.npmjs.com/package/md5) ou a nativa [`crypto`](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options), para conversão de valores para `md5`.
+- Note that the password stored in the bank is a [`hash md5`](https://pt.wikipedia.org/wiki/MD5), whose translation is also commented in the file;
+- Your API must be able to translate a common password into an `md5 hash`, comparing and validating it with that of the database;
+- It is possible to use third-party libraries such as [`md5`](https://www.npmjs.com/package/md5) or the native [`crypto`](https://nodejs.org/api/crypto. html#crypto_crypto_createhash_algorithm_options), for converting values to `md5`.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará fazer a ação de login com dados válidos. **Esse teste pressupõe a validade de anteriores**;
-  - O avaliador utilizará o e-mail `zebirita@email.com` e senha `$#zebirita#$` para fazer o login;
+- The evaluator will try to perform the login action with valid data. **This test assumes the validity of previous tests**;
+   - The evaluator will use the email `zebirita@email.com` and password `$#zebirita#$` to log in;
 
 </details>
 
@@ -609,280 +611,280 @@ Sua página deve ser capaz de utilizar os dados do cliente previstos em `db.exam
 
 ### `02register.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Farão a navegação para a página principal em `localhost:3000/login`;
-- Farão a navegação para a página de registro através do `Botão de registro`;
+- They will navigate to the main page at `localhost:3000/login`;
+- Navigate to the registration page using the `Register button`;
 
 ---
 
-#### 6 - Crie uma tela de registro que deve ser acessível via endpoint /register no navegador e pelo botão de registro na tela de login
+#### 6 - Create a registration screen that must be accessible via the /register endpoint in the browser and the register button on the login screen
 
-**Observações técnicas**
+**Technical observations**
 
-- Aqui deve-se garantir que a aplicação possui acesso a uma rota `/register`;
-- Também deve ser possível acessar a tela de registro clicando no botão de cadastro via tela de `login`.
+- Here you must ensure that the application has access to a `/register` route;
+- It must also be possible to access the registration screen by clicking on the registration button via the `login` screen.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador navegará para o endereço do host utilizando o endpoint `/register`;
-- O avaliador tentará, pela tela de login, acessar a página de registro clicando no `Botão de cadastro`.
+- The evaluator will navigate to the host address using the `/register` endpoint;
+- The evaluator will try, through the login screen, to access the registration page by clicking on the `Registration button`.
 
 </details>
 
 ---
 
-#### 7 - Crie os elementos da tela de registro com os data-testids disponíveis no protótipo
+#### 7 - Create the registration screen elements with the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`Comum / Cadastro`](#construcao-do-front-end-e-componentizacao);
+- Guide yourself through the following prototype screen: [`Common / Registration`](#construcao-do-front-end-e-componentizacao);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador buscará pelos elementos fundamentais aos demais testes.
+- The evaluator will look for the fundamental elements for the other tests.
 
 </details>
 
 ---
 
-#### 8 - Desenvolva a tela de registro de maneira que ela impossibilite o cadastro com dados mal formatados
+#### 8 - Design the registration screen in such a way that it makes it impossible to register with poorly formatted data
 
-**Observações técnicas**
+**Technical observations**
 
-- A senha recebe qualquer tipo de caractere;
-- Aqui, os critérios para considerar os dados mal formatados são:
-  - Nome completo com número de caracteres menor que `12`.
-  - Email incompleto, fora de um padrão comum: `<email>@<domínioPrincipal>.<domínioGenérico>`;
-  - Senha com número de caracteres menor que `6`.
+- The password can be any type of character;
+- Here, the criteria for considering poorly formatted data are:
+   - Full name with a number of characters less than `12`.
+   - Incomplete email, outside of a common pattern: `<email>@<MainDomain>.<GenericDomain>`;
+   - Password with a number of characters less than `6`.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará 4 situações aleatórias diferentes (uma para cada validação) de maneira isolada, sendo uma delas válida;
-- O avaliador testará seu formulário com as 4 situações de maneira sequencial;
-- O avaliador não vai executar o registro pelo botão de registro. Ele validará se o botão ficará habilitado ou não, a depender dos critérios durante o input dos dados;
-- É esperado que haja a validação dos dados durante a escrita dos mesmos.
+- The evaluator will test 4 different random situations (one for each validation) in isolation, one of which is valid;
+- The evaluator will test your form with the 4 situations sequentially;
+- The evaluator will not perform the registration using the registration button. It will validate whether the button will be enabled or not, depending on the criteria during data entry;
+- It is expected that data will be validated during writing.
 
 </details>
 
 ---
 
-#### 9 - Desenvolva a tela de registro de maneira que ela possibilite cadastrar com dados válidos
+#### 9 - Develop the registration screen so that it makes it possible to register with valid data
 
-**Observações técnicas**
+**Technical observations**
 
-Sua página deve ser capaz de cadastrar pessoas usuárias com dados válidos:
+Your page must be able to register users with valid data:
 
-- Note que a senha deve ser armazenada no banco como uma [`hash md5`](https://pt.wikipedia.org/wiki/MD5). A tradução deve ocorrer na API;
-- É possível utilizar bibliotecas de terceiros como a [`md5`](https://www.npmjs.com/package/md5) ou a nativa [`crypto`](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options), para conversão de valores para `md5`.
+- Note that the password must be stored in the database as a [`hash md5`](https://pt.wikipedia.org/wiki/MD5). Translation must occur in the API;
+- It is possible to use third-party libraries such as [`md5`](https://www.npmjs.com/package/md5) or the native [`crypto`](https://nodejs.org/api/crypto. html#crypto_crypto_createhash_algorithm_options), for converting values to `md5`.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará fazer a ação de cadastro com dados aleatórios válidos, validando-os posteriormente no banco de dados;
-- O avaliador espera que haja uma requisição `POST` para API ao clicar no `Botão de registro`, que retorne o status `201 - Created`;
-- O avaliador espera acessar uma página `localhost:3000/customer/products` como padrão para o usuário do tipo cliente;
-- Não é necessário ter a página pronta, mas a rota no front deve estar acessível para que o avaliador a identifique.
+- The evaluator will attempt to carry out the registration action with valid random data, later validating them in the database;
+- The evaluator expects there to be a `POST` request to the API when clicking on the `Register button`, which returns the status `201 - Created`;
+- The evaluator expects to access a `localhost:3000/customer/products` page as default for the customer type user;
+- It is not necessary to have the page ready, but the route on the front must be accessible for the evaluator to identify.
 
 </details>
 
 ---
 
-#### 10 - Desenvolva a tela de registro de maneira que ela impossibilite o cadastro de um usuário já existente
+#### 10 - Design the registration screen in such a way that it makes it impossible for an existing user to register
 
-**Observações técnicas**
+**Technical observations**
 
-- Sua página deve impedir o cadastro de pessoas com o mesmo Nome ou E-mail.
+- Your page must prevent people with the same name or email from registering.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará realizar o fluxo de cadastro anterior duas vezes, com um dado gerado aleatoriamente.
-- Na primeira vez o avaliador espera que haja uma requisição `POST` para API ao clicar no `Botão de registro`, que retorne o status `201 - Created`;
-- Na segunda vez o avaliador espera que haja uma requisição `POST` para API ao clicar no `Botão de registro`, que retorne o status `409 - Conflict`;
-- O avaliador espera que apareça na tela um elemento, antes oculto, com uma mensagem de erro qualquer.
-  - Elemento: `common_register__element-invalid_register`;
+- The evaluator will attempt to perform the previous registration flow twice, with randomly generated data.
+- The first time the evaluator expects there to be a `POST` request to the API when clicking on the `Register button`, which returns the status `201 - Created`;
+- The second time the evaluator expects there to be a `POST` request to the API when clicking on the `Register button`, which returns the status `409 - Conflict`;
+- The evaluator waits for an element, previously hidden, to appear on the screen with some error message.
+   - Element: `common_register__element-invalid_register`;
 
 </details>
 
 ---
 
-## `Fluxo do Cliente`
+## `Customer Flow`
 
-O fluxo do cliente deve garantir que seja possível **navegar e escolher produtos**, **adicionar produtos ao carrinho**, **fazer checkout (gerar uma nova venda)**, **consultar pedidos** e **acessar detalhes do mesmo**.
+The customer flow must ensure that it is possible to **browse and choose products**, **add products to the cart**, **checkout (generate a new sale)**, **consult orders** and **access details of the same**.
 
 ---
 
 ### `03customer_products.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Farão o fluxo de login com o cliente "Zé Birita" (o login é sempre validado nos testes);
-- Esse fluxo deve dar acesso a uma página padrão de produtos em `localhost:3000/customer/products`;
-- Verificarão no banco de dados, se consta a lista de produtos padrão, conforme a tabela `products` do modelo em `db.example.sql`.
+- They will perform the login flow with the "Zé Birita" client (the login is always validated in tests);
+- This flow must give access to a standard products page at `localhost:3000/customer/products`;
+- They will check the database to see if the list of standard products is included, according to the model's `products` table in `db.example.sql`.
 
 ---
 
-#### 11 - Crie uma tela de produtos do cliente contendo uma barra de navegação - navbar -, que servirá também para demais telas das pessoas usuárias
+#### 11 - Create a customer product screen containing a navigation bar - navbar -, which will also be used for other user screens
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`Cliente / Produtos`](#construcao-do-front-end-e-componentizacao);
+- Be guided by the following prototype screen: [`Client / Products`](#construcao-do-front-end-e-componentizacao);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-  O avaliador **buscará pelos elementos** fundamentais aos demais testes:
+   The evaluator **will look for the elements** that are fundamental to the other tests:
 
-- Elemento genérico que seja um item de menu para página de produtos;
-- Elemento genérico que seja um item de menu para página de pedidos;
-- Elemento genérico para o nome da pessoa usuária;
-- Elemento genérico que seja um item de menu para o logout.
+- Generic element that is a menu item for the product page;
+- Generic element that is a menu item for the order page;
+- Generic element for the name of the user;
+- Generic element that is a menu item for logout.
 
 </details>
 
 ---
 
-#### 12 - Desenvolva a tela de produtos do cliente criando os demais elementos com os data-testids disponíveis no protótipo
+#### 12 - Develop the customer's product screen by creating the other elements with the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`Cliente / Produtos`](#construcao-do-front-end-e-componentizacao);
-- Deve-se construir um total de `11` cards, cada um correspondente a um item da tabela produtos, conforme a tabela `products` do modelo em `db.example.sql`.
-- Os `data-testid` desses itens devem terminar com o id de cada produto, exemplo:
-  - `customer_products__element-card-price-1`; `customer_products__element-card-price-2`; ...; `customer_products__element-card-price-11`.
+- Be guided by the following prototype screen: [`Client / Products`](#construcao-do-front-end-e-componentizacao);
+- A total of `11` cards must be built, each corresponding to an item in the products table, according to the `products` table of the model in `db.example.sql`.
+- The `data-testid` of these items must end with the id of each product, example:
+   - `customer_products__element-card-price-1`; `customer_products__element-card-price-2`; ...; `customer_products__element-card-price-11`.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-  **O avaliador buscará pelos elementos relacionados a todos os cards de produtos:**
+   **The evaluator will search for elements related to all product cards:**
 
-- Elemento genérico do nome/título do produto;
-- Elemento genérico do preço do produto;
-- Imagem do produto;
-- Botão para adicionar quantidade de itens;
-- Botão para remover quantidade de itens;
-- Input de quantidade de itens.
+- Generic element of the product name/title;
+- Generic element of the product price;
+- Product image;
+- Button to add quantity of items;
+- Button to remove quantity of items;
+- Input quantity of items.
 
 </details>
 
 ---
 
-#### 13 - Desenvolva a tela de produtos do cliente de forma que ela pressuponha dados válidos da pessoa usuária armazenados no localStorage
+#### 13 - Develop the customer product screen so that it assumes valid user data stored in localStorage
 
-**Observações técnicas**
+**Technical observations**
 
-- **Após o login (e durante a navegação), deve-se manter os dados da pessoa usuária no `localStorage`, conforme o modelo:**
+- **After logging in (and during browsing), the user's data must be kept in `localStorage`, according to the model:**
 
 ```js script
 {
-  name: "Nome Da Pessoa Usuária",
-  email: "email@dominio.com",
-  role: "customer",
-  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTm9tZSBEYSBQZXNzb2EgVXN1w6FyaWEiLCJlbWFpbCI6ImVtYWlsQGRvbWluaW8uY29tIiwicm9sZSI6ImN1c3RvbWVyIn0.s5cmiyY16yViCXkHuzWekxkMeYBi75eT8uJnSbfadNE"
+   name: "User Person Name",
+   email: "email@domain.com",
+   role: "customer",
+   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTm9tZSBEYSBQZXNzb2EgVXN1w6FyaWEiLCJlbWFpbCI6ImVtYWlsQGRvbWluaW8uY29tIiwicm9sZSI6ImN1c3RvbWVy In0.s5cmiyY16yViCXkHuzWekxkMeYBi75eT8uJnSbfadNE"
 }
 ```
 
-- **Sua página também deve ser capaz de deslogar a pessoa usuária que não possuir um `token` válido no `localStorage`**
-  - Note que aqui, é necessário que sua API seja capaz de gerar um `token` [`JWT`](https://jwt.io/), com base na chave em `./back-end/jwt.evaluation.key` após um login válido.
-  - Também será validado se esses dados são descartados ao logout.
+- **Your page must also be able to log out the user who does not have a valid `token` in `localStorage`**
+   - Note that here, your API must be able to generate a `token` [`JWT`](https://jwt.io/), based on the key in `./back-end/jwt.evaluation. key` after a valid login.
+   - It will also be validated if this data is discarded upon logout.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará se o `local storage` contém os dados da pessoa usuária após o login;
-- O avaliador testará se o nome da pessoa, contido no `local storage`, também está na navbar;
-- O avaliador testará se o `local storage` contém um `token` válido;
-- O avaliador testará se o logout descarta os dados do `local storage` da pessoa usuária.
+- The evaluator will test whether the `local storage` contains the user's data after login;
+- The evaluator will test whether the person's name, contained in the `local storage`, is also in the navbar;
+- The evaluator will test whether the `local storage` contains a valid `token`;
+- The evaluator will test whether the logout discards data from the user's local storage.
 
 </details>
 
 ---
 
-#### 14 - Desenvolva a tela de produtos do cliente de forma que os cards de todos os produtos pré-cadastrados contenham os valores corretos
+#### 14 - Develop the customer's product screen so that the cards for all pre-registered products contain the correct values
 
-**Observações técnicas**
+**Technical observations**
 
-- Há um total de `11` cards, cada um correspondente a um item da tabela produtos, conforme a tabela `products` do modelo em `db.example.sql`;
-- Os dados desses produtos devem condizer com os dados do banco de dados;
-- Nesse requisito, deve-se garantir que as imagens dos produtos estejam disponíveis para acesso direto via rota estática na sua API.
+- There are a total of `11` cards, each corresponding to an item in the products table, according to the `products` table of the model in `db.example.sql`;
+- The data on these products must match the data in the database;
+- In this requirement, you must ensure that product images are available for direct access via the static route in your API.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará se os dados de cada card condizem com os dados do banco de dados.
-- O avaliador testará se é possível fazer uma requisição para os endereços das imagens de cada produto.
+- The evaluator will test whether the data on each card matches the data in the database.
+- The evaluator will test whether it is possible to make a request for the image addresses of each product.
 
 </details>
 
 ---
 
-#### 15 - Desenvolva a tela de produtos do cliente de forma que o preço total esteja correto após a adição de itens aleatórios
+#### 15 - Design the customer product screen so that the total price is correct after adding random items
 
-**Observações técnicas**
+**Technical observations**
 
-- **Cada card deve possibilitar a adição, remoção ou definição manual da quantidade de itens de cada produto**
-  - Esses itens devem compor um "carrinho de compras", que deve ser persistente no fluxo do cliente até o momento do checkout (quando o carrinho se torna uma venda concretizada);
+- **Each card must allow the addition, removal or manual definition of the quantity of items for each product**
+   - These items must make up a "shopping cart", which must be persistent in the customer's flow until the moment of checkout (when the cart becomes a completed sale);
 
-👀**De olho nas dicas:**
+👀**Keep an eye on the tips:**
 
-- Considere utilizar o `localStorage` como forma de armazenar uma entidade `carrinho`;
-- Considere a utilização de um contexto específico para acessar e manipular esses dados (tirando essa competência dos componentes filho). Esse contexto não deve ser geral, ou seja, não deve ser acessado por outras páginas fora do escopo do cliente.
-- Para facilitar o processo, considere o carrinho como um 'modelo' de uma entidade banco de dados, mas programado no front-end (por ser temporário). Esses dados não devem persistir ao logout.
-- O valor total do pedido é a soma dos resultados das quantidades de cada item, multiplicada pelo preço unitário dos mesmos.
+- Consider using `localStorage` as a way to store a `cart` entity;
+- Consider using a specific context to access and manipulate this data (taking this competence away from the child components). This context must not be general, that is, it must not be accessed by other pages outside the scope of the client.
+- To facilitate the process, consider the cart as a 'model' of a database entity, but programmed in the front-end (as it is temporary). This data should not persist upon logout.
+- The total order value is the sum of the results of the quantities of each item, multiplied by their unit price.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador vai utilizar um recorte aleatório de produtos para fazer o pedido (esses dados são imprimidos durante o teste);
-- Para cada item da lista gerada:
-  - O avaliador testará se a adição do item (`Botão de adição`) adiciona ao `input` da quantidade;
-  - O avaliador testará se após a adição do item, a ação de remoção (`Botão de remoção`) do dobro da quantidade manterá o `input` da quantidade em `0` (não gerando valores negativos);
-  - O avaliador testará se é possível fazer a alteração manual `input` da quantidade;
-  - O avaliador testará o fluxo completo de adição de itens, validando o valor total de produtos.
+- The evaluator will use a random selection of products to place the order (this data is printed during the test);
+- For each item in the generated list:
+   - The evaluator will test whether adding the item (`Add button`) adds to the quantity `input`;
+   - The evaluator will test whether after adding the item, the removal action (`Remove button`) of double the quantity will keep the quantity `input` at `0` (not generating negative values);
+   - The evaluator will test whether it is possible to manually change the input quantity;
+   - The evaluator will test the complete item addition flow, validating the total value of products.
 
 </details>
 
 ---
 
-#### 16 - Desenvolva a tela de produtos do cliente de forma que haja um botão de carrinho que redirecionará para a tela de checkout caso itens sejam adicionados
+#### 16 - Design the customer product screen so that there is a cart button that will redirect to the checkout screen if items are added
 
-**Observações técnicas**
+**Technical observations**
 
-- Sua página deve garantir que alterações no carrinho também mudem o valor total da venda:
- 👀**De olho na dica:** tire proveito do **contexto específico** mencionado anteriormente para realizar a lógica e fornecer o resultado do cálculo.
+- Your page must ensure that changes to the cart also change the total sale value:
+  👀**Keep an eye on the tip:** take advantage of the **specific context** mentioned previously to perform the logic and provide the calculation result.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará a existência de um botão de carrinho com um valor total válido e que seja capaz de nos direcionar à tela de checkout.
-  - O avaliador espera acessar uma página `localhost:3000/customer/checkout` após o clique no botão do carrinho;
-  - Não é necessário ter a página pronta, mas a rota no front deve estar acessível para que o avaliador a identifique.
+- The evaluator will test the existence of a cart button with a valid total value and that is capable of directing us to the checkout screen.
+   - The evaluator expects to access a `localhost:3000/customer/checkout` page after clicking the cart button;
+   - It is not necessary to have the page ready, but the route on the front must be accessible for the evaluator to identify.
 
 </details>
 
@@ -890,125 +892,125 @@ Todos os testes desse arquivo:
 
 ### `04customer_checkout.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Vão utilizar uma amostragem de produtos do banco de dados (impresso na tela durante o teste);
-- Vão gerar um novo pedido com o preço total presumido e dados aleatórios para utilização nos testes (impresso na tela durante o teste);
-- Vão fazer login com o cliente "Zé Birita";
-- Vão validar o valor total dos produtos adicionados na tela de produtos;
-- Vão navegar para a tela de checkout através do botão do carrinho de compras;
-- O endereço da página deve ser `localhost:3000/customer/checkout`.
+- They will use a sample of products from the database (printed on the screen during the test);
+- They will generate a new order with the assumed total price and random data for use in tests (printed on the screen during the test);
+- They will log in with the "Zé Birita" client;
+- They will validate the total value of products added on the product screen;
+- They will navigate to the checkout screen using the shopping cart button;
+- The page address must be `localhost:3000/customer/checkout`.
 
 ---
 
-#### 17 - Crie uma tela de checkout do cliente com elementos com os data-testids disponíveis no protótipo
+#### 17 - Create a customer checkout screen with elements with the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`Comum / Checkout`](#construcao-do-front-end-e-componentizacao);
-- A quantidade de itens no checkout deve corresponder à quantidade de itens no recorte aleatório de produtos utilizados no teste;
-- Aqui, a referência de identificação dos campos das linhas da tabela deve ser o índice (`index`) da matriz (`array`) dos produtos no carrinho de compras. Por exemplo:
-  - `element-order-table-name-0`; `element-order-table-name-1`; ...; `element-order-table-name-x`.
-- O `value` das `options` do `select` das pessoas vendedoras deve ser o `id` da pessoa vendedora.
-  - Essa instrução será utilizada na validação do requisito 20.
+- Guide yourself through the following prototype screen: [`Comum / Checkout`](#construcao-do-front-end-e-componentizacao);
+- The number of items at checkout must correspond to the number of items in the random selection of products used in the test;
+- Here, the identification reference for the fields in the table rows must be the index (`index`) of the matrix (`array`) of the products in the shopping cart. For example:
+   - `element-order-table-name-0`; `element-order-table-name-1`; ...; `element-order-table-name-x`.
+- The `value` of the `options` of the `select` of the sellers must be the `id` of the seller.
+   - This instruction will be used to validate requirement 20.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará os data-testids referentes aos itens do carrinho e demais elementos.
+- The evaluator will test the data-testids referring to the cart items and other elements.
 
 </details>
 
 ---
 
-#### 18 - Desenvolva a tela de checkout do cliente de forma a possuir os dados corretos do carrinho e preço total
+#### 18 - Develop the customer checkout screen to have the correct cart data and total price
 
-**Observações técnicas**
+**Technical observations**
 
-- Os dados propostos no recorte aleatório de produtos (itens e preço total) no teste devem condizer com os dados contidos no carrinho durante o checkout.
+- The data proposed in the random selection of products (items and total price) in the test must match the data contained in the cart during checkout.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará se os itens contidos na venda correspondem aos itens do checkout
+- The appraiser will test whether the items contained in the sale match the items at checkout
 
 </details>
 
 ---
 
-#### 19 - Desenvolva a tela de checkout do cliente de forma que seja possível remover itens do carrinho
+#### 19 - Design the customer checkout screen so that items can be removed from the cart
 
-**Observações técnicas**
+**Technical observations**
 
-- O cliente deve ser capaz de remover itens do carrinho pela tela de checkout, alterando o valor total da venda.
+- The customer must be able to remove items from the cart via the checkout screen, changing the total sale value.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará realizar a remoção de itens validando-os na tabela.
-  - O avaliador vai deletar uma quantidade aleatória de itens do carrinho (esses dados são impressos no teste).
+- The evaluator will attempt to remove items by validating them in the table.
+   - The evaluator will delete a random number of items from the cart (this data is printed in the test).
 
 </details>
 
 ---
 
-#### 20 - Desenvolva a tela de checkout do cliente de forma a nos redirecionar para a tela de detalhes do pedido após a finalização do mesmo
+#### 20 - Develop the customer checkout screen to redirect us to the order details screen after completing the order
 
-**Observações técnicas**
+**Technical observations**
 
-- Não se preocupe aqui em ter a tela de detalhes do pedido pronta: o que deve estar garantido, é que é possível ter acesso a uma rota `localhost:3000/customer/orders/<id>` no front, onde o `id` é retornado da requisição da venda;
-- Ao final do pedido (ao clicar no 'Botão de finalização do pedido'), a tela de checkout deve disparar uma requisição para a API, inserindo a venda e retornando o `id` da mesma, para utilização no redirecionamento.
+- Don't worry about having the order details screen ready: what should be guaranteed is that it is possible to have access to a route `localhost:3000/customer/orders/<id>` on the front, where the `id ` is returned from the sales request;
+- At the end of the order (when clicking on the 'Complete order button'), the checkout screen must trigger a request to the API, inserting the sale and returning its `id`, for use in redirection.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador verificará se ao final do checkout é disparado uma request `POST` com uma autorização (`token`) válida, que retorne status `201 - Created`;
-- O avaliador verificará se após isso o endereço da url contém o `id` do pedido criado. Por exemplo, se o `id` gerado for `3`, então: `localhost:3000/customer/orders/3`.
-- O avaliador selecionará a `pessoa vendedora` pelo `id` como informado no [requisito 17](#17---crie-uma-tela-de-checkout-do-cliente-com-elementos-com-os-data-testids-disponíveis-no-protótipo)
+- The evaluator will check whether at the end of the checkout a `POST` request is triggered with a valid authorization (`token`), which returns status `201 - Created`;
+- The evaluator will then check whether the url address contains the `id` of the created order. For example, if the generated `id` is `3`, then: `localhost:3000/customer/orders/3`.
+- The evaluator will select the `selling person` by `id` as informed in [requirement 17](#17---create-a-customer-checkout-screen-with-elementos-com-os-data- testids-available-on-prototype)
 
 </details>
 
 ---
 
-#### 21 - Desenvolva a tela de checkout do cliente de forma a gerar uma nova venda na tabela sales, assim como relações em sales_products, ao finalizar o pedido
+#### 21 - Develop the customer checkout screen in order to generate a new sale in the sales table, as well as relationships in sales_products, when completing the order
 
-**Observações técnicas**
+**Technical observations**
 
-**Os status de um pedido podem ser:**
-      - `Pendente`;
-      - `Preparando`;
-      - `Em Trânsito`;
-      - `Entregue`.
+**The status of an order can be:**
+       - `Pending`;
+       - `Preparing`;
+       - `In Transit`;
+       - `Delivered`.
 
-- O "status" padrão de cada pedido deve ser `Pendente`;
+- The default "status" of each order must be `Pending`;
 
-- Deve-se garantir que a requisição para API se encarregue de criar uma venda, e na mesma requisição, relacionar essa venda com os produtos do carrinho:
-  - Aqui possuímos uma relação de `N:N` (muitos para muitos) onde se relacionam as tabelas: `sales` < 1:N > `sales_products` < N:1 > `products`.
+- It must be ensured that the API request is responsible for creating a sale, and in the same request, relate this sale to the products in the cart:
+   - Here we have a `N:N` (many to many) relationship where the tables are related: `sales` < 1:N > `sales_products` < N:1 > `products`.
 
-- Os testes farão a inserção da venda via checkout e após isso farão a validação desses dados no banco de dados.
+- The tests will insert the sale via checkout and then validate this data in the database.
 
-- Atente-se que, no [protótipo](#construcao-do-front-end-e-componentizacao), a tela `Cliente / Detalhes do Pedido` possui a data do pedido:
-  - A data deve ser inserida automaticamente durante o processo de inserção da venda após o checkout;
-  - O banco de dados está configurado para o [`fuso horário Zulu (Z)`](https://pt.wikipedia.org/wiki/Fuso_hor%C3%A1rio#Meridianos) (`timezone: 'Z'` em `./back-end/database/config/config.js`), que é alinhado com o `UTC+0`;
-    - Saiba mais sobre o [`UTC` (Tempo universal coordenado)](https://pt.wikipedia.org/wiki/Tempo_Universal_Coordenado);
-    - Isso é necessário para evitar conflitos de horário na hora da leitura e escrita da informação no banco de dados.
-  - É possível utilizar bibliotecas externas para manipulação de datas como o [`Moment.js`](https://momentjs.com/), ou mesmo utilizar o objeto [`Date`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date) para normatizar horários na hora da leitura ou escrita no formato `UTC`.
- 👀**De olho na dica:** é possível utilizar o Sequelize para definir um valor padrão para um campo durante a criação do seu modelo. Valores padrão podem incluir a [data atual](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html).
+- Please note that, in the [protótipo](#construcao-do-front-end-e-componentizacao), the `Customer / Order Details` screen has the order date:
+   - The date must be automatically entered during the sale insertion process after checkout;
+   - The database is configured for [`Zulu time zone (Z)`](https://pt.wikipedia.org/wiki/Fuso_hor%C3%A1rio#Meridianos) (`timezone: 'Z'` in ` ./back-end/database/config/config.js`), which is aligned with `UTC+0`;
+     - Find out more about [`UTC` (Coordinated Universal Time)](https://pt.wikipedia.org/wiki/Tempo_Universal_Coordenado);
+     - This is necessary to avoid time conflicts when reading and writing information in the database.
+   - It is possible to use external libraries to manipulate dates such as [`Moment.js`](https://momentjs.com/), or even use the [`Date`](https://developer.mozilla.org) object /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date) to standardize times when reading or writing in `UTC` format.
+  👀**Keep an eye on the tip:** it is possible to use Sequelize to define a default value for a field during the creation of your model. Default values can include [current date](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html).
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará se, após realizado o checkout, as alterações constarão no banco de dados.
+- The evaluator will test whether, after checkout, the changes will appear in the database.
 
 </details>
 
@@ -1016,72 +1018,72 @@ Todos os testes desse arquivo:
 
 ### `05customer_orders.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Vão utilizar uma amostragem de produtos do banco de dados (impresso na tela durante o teste);
-- Vão fazer login com o cliente "Zé Birita";
-- Vão gerar um novo pedido com o preço total presumido e dados aleatórios para utilização nos testes (impresso na tela durante o teste);
-- Vão fazer o checkout desse novo pedido;
-- Vão acessar a `HomePage` do usuário, navegando para a tela de login (que deve fazer o redirecionamento). Lembrando que, ao acessar a tela de login com um usuário já logado, deve-se fazer o direcionamento para a página padrão do mesmo;
-- Vão navegar para a tela de produtos através do menu de navegação (saindo da tela de detalhes do pedido);
-- Vão navegar para a tela de pedidos do cliente através do menu de navegação;
-- Vão coletar os dados de vendas da tabela `sales` referentes ao usuário (id `3`);
-- O endereço da página deve ser `localhost:3000/customer/orders`.
+- They will use a sample of products from the database (printed on the screen during the test);
+- They will log in with the "Zé Birita" client;
+- They will generate a new order with the assumed total price and random data for use in tests (printed on the screen during the test);
+- They will checkout this new order;
+- They will access the user's `HomePage`, navigating to the login screen (which should redirect). Remembering that, when accessing the login screen with a user already logged in, they must be directed to their default page;
+- They will navigate to the product screen through the navigation menu (leaving the order details screen);
+- They will navigate to the customer order screen through the navigation menu;
+- They will collect sales data from the `sales` table for the user (id `3`);
+- The page address must be `localhost:3000/customer/orders`.
 
 ---
 
-#### 22 - Crie uma tela de pedidos do cliente com elementos a partir dos data-testids disponíveis no protótipo
+#### 22 - Create a customer order screen with elements from the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`Comum / Meus Pedidos`](#construcao-do-front-end-e-componentizacao);
-- Os `data-testid` desses itens devem terminar com o `id` de cada venda no banco. Por exemplo:
-  - `customer_products__element-order-date-1`; `customer_products__element-order-date-2`; ...; `customer_products__element-order-date-x`.
+- Guide yourself through the following prototype screen: [`Common / My Orders`](#construcao-do-front-end-e-componentizacao);
+- The `data-testid` of these items must end with the `id` of each sale at the bank. For example:
+   - `customer_products__element-order-date-1`; `customer_products__element-order-date-2`; ...; `customer_products__element-order-date-x`.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador vai testar se existem `data-testids` para os dez primeiros itens contidos na tabela 'sales';
-  ⚠️**Importante**: o avaliador oficial vai testar somente uma venda, mas caso você opte por usar o parâmetro de ambiente `EVAL_ALWAYS_RESTORE_DEV_DB=false` no back-end, localmente o teste fará avaliação de até dez vendas.
+- The evaluator will test whether there are `data-testids` for the first ten items contained in the 'sales' table;
+   ⚠️**Important**: the official evaluator will only test one sale, but if you choose to use the environment parameter `EVAL_ALWAYS_RESTORE_DEV_DB=false` in the back-end, locally the test will evaluate up to ten sales.
 
 </details>
 
 ---
 
-#### 23 - Desenvolva a tela de pedidos do cliente de forma a conter a lista de pedidos do mesmo com os dados corretos
+#### 23 - Develop the customer order screen to contain the list of customer orders with the correct data
 
-**Observações técnicas**
+**Technical observations**
 
-- Garanta que os dados dos itens de cada card condizem com as vendas registradas na tabela `sales` (vendas);
+- Ensure that the item data on each card matches the sales recorded in the `sales` table;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador vai testar se os dados associados aos `data-testids` dos dez primeiros itens coincidem com os do banco de dados.
-   ⚠️**Importante**: o avaliador oficial vai testar somente uma venda, mas caso você opte por usar o parâmetro de ambiente `EVAL_ALWAYS_RESTORE_DEV_DB=false` no back-end, localmente o teste fará avaliação de até dez vendas.
+- The evaluator will test whether the data associated with the `data-testids` of the first ten items coincide with those in the database.
+    ⚠️**Important**: the official evaluator will only test one sale, but if you choose to use the environment parameter `EVAL_ALWAYS_RESTORE_DEV_DB=false` in the back-end, locally the test will evaluate up to ten sales.
 
 </details>
 
 ---
 
-#### 24 - Desenvolva a tela de pedidos do cliente de forma a dar acesso à tela de detalhes de um pedido ao clicar no card do mesmo
+#### 24 - Develop the customer order screen to give access to the order details screen when clicking on the order card
 
-**Observações técnicas**
+**Technical observations**
 
-- Não se preocupe aqui em ter a tela de detalhes do pedido pronta: o que deve estar garantido é que é possível ter acesso a uma rota `localhost:3000/customer/orders/<id>` no front;
-- Aqui, o acesso a cada item deve ser possível pelos cards na tela de pedidos;
+- Don't worry about having the order details screen ready: what must be guaranteed is that it is possible to have access to a route `localhost:3000/customer/orders/<id>` at the front;
+- Here, access to each item must be possible via cards on the order screen;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador acessará a tela de detalhes do último pedido pela tela de pedidos, após o checkout do mesmo. Por exemplo:
-  - Se o pedido gerado for o de `id` `5`, o avaliador espera acessar o endereço `localhost:3000/customer/orders/5` via aquele card,
+- The evaluator will access the last order details screen through the order screen, after checking out the order. For example:
+   - If the generated order is `id` `5`, the evaluator expects to access the address `localhost:3000/customer/orders/5` via that card,
 
 </details>
 
@@ -1089,125 +1091,125 @@ Todos os testes desse arquivo:
 
 ### `06customer_order_details.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Vão utilizar uma amostragem de produtos do banco de dados (impresso na tela durante o teste);
-- Vão fazer login com o cliente "Zé Birita";
-- Vão gerar um novo pedido com o preço total presumido e dados aleatórios para utilização nos testes (impresso na tela durante o teste);
-- Vão fazer o checkout desse novo pedido, o que deve redirecionar para tela de detalhes daquele pedido;
-- O endereço da página deve ser `localhost:3000/customer/orders/<idVenda>`.
+- They will use a sample of products from the database (printed on the screen during the test);
+- They will log in with the "Zé Birita" client;
+- They will generate a new order with the assumed total price and random data for use in tests (printed on the screen during the test);
+- They will checkout this new order, which should redirect to the details screen for that order;
+- The page address must be `localhost:3000/customer/orders/<idVenda>`.
 
 ---
 
-#### 25 - Crie uma tela de detalhes do pedido do cliente com elementos a partir dos data-testids disponíveis no protótipo
+#### 25 - Create a customer order details screen with elements from the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`Comum / Detalhes do Pedido`](#construcao-do-front-end-e-componentizacao);
+- Guide yourself through the following prototype screen: [`Common / Order Details`](#construcao-do-front-end-e-componentizacao);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará os `data-testids` referentes aos itens da venda e demais elementos.
+- The evaluator will test the `data-testids` referring to the sale items and other elements.
 
 </details>
 
 ---
 
-#### 26 - Desenvolva a tela de detalhes do pedido do cliente de forma a possuir os dados corretos da venda
+#### 26 - Develop the customer order details screen to have the correct sales data
 
-**Observações técnicas**
+**Technical observations**
 
-- Sua aplicação deve garantir que os dados do pedido do cliente estejam atualizados ao acessar o detalhe de algum deles.
+- Your application must ensure that the customer's order data is updated when accessing the details of any of them.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará se os dados contidos nos campos das linhas (produtos relacionados à venda), tal como demais valores (id do pedido, nome da pessoa vendedora, data de pedido, status da venda, preço total) conferem com os dados da venda feita anteriormente.
+- The evaluator will test whether the data contained in the line fields (products related to the sale), as well as other values (order ID, name of the seller, order date, sale status, total price) match the sales data done previously.
 
 </details>
 
 ---
 
-## `Fluxo da Pessoa Vendedora`
+## `Selling Person Flow`
 
-O fluxo da pessoa vendedora deve garantir que é possível listar pedidos relacionados àquela pessoa vendedora e manipular o status desses pedidos.
+The sales person flow must ensure that it is possible to list orders related to that sales person and manipulate the status of these orders.
 
 ---
 
 ### `07seller_orders.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Vão utilizar uma amostragem de produtos do banco de dados (impresso na tela durante o teste);
-- Vão fazer login com o cliente "Zé Birita";
-- Vão gerar um novo pedido com o preço total presumido e dados aleatórios para utilização nos testes (impresso na tela durante o teste);
-- Vão fazer o checkout desse novo pedido, portanto a venda estará registrada no banco de dados;
-- Vão fazer o logout do sistema;
-- Vão fazer o login com a vendedora "Fulana Pereira" utilizando o e-mail `fulana@deliveryapp.com` e senha `fulana@123`;
-- Vão coletar os dados de vendas da tabela `sales` referentes ao usuário (id `2`);
-- A página padrão esperada para pessoa vendedora é `localhost:3000/seller/orders`.
+- They will use a sample of products from the database (printed on the screen during the test);
+- They will log in with the "Zé Birita" client;
+- They will generate a new order with the assumed total price and random data for use in tests (printed on the screen during the test);
+- They will checkout this new order, so the sale will be registered in the database;
+- They will log out of the system;
+- They will log in with the seller "Fulana Pereira" using the email `fulana@deliveryapp.com` and password `fulana@123`;
+- They will collect sales data from the `sales` table for the user (id `2`);
+- The expected default page for the seller is `localhost:3000/seller/orders`.
 
 ---
 
-#### 27 - Crie uma tela de pedidos da pessoa vendedora com elementos a partir dos data-testids disponíveis no protótipo
+#### 27 - Create a sales person's order screen with elements from the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`P. Vend / Pedidos`](#construcao-do-front-end-e-componentizacao);
-- Os `data-testid` desses itens devem terminar com o `id` de cada venda no banco. Por exemplo:
-  - `seller_orders__element-order-date-1`; `seller_orders__element-order-date-2`; ...; `seller_orders__element-order-date-x`.
+- Guide yourself through the following prototype screen: [`P. Sales / Orders`](#construcao-do-front-end-e-componentizacao);
+- The `data-testid` of these items must end with the `id` of each sale at the bank. For example:
+   - `seller_orders__element-order-date-1`; `seller_orders__element-order-date-2`; ...; `seller_orders__element-order-date-x`.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador vai testar se existem `data-testids` para os dez primeiros itens contidos na tabela 'sales'.
+- The evaluator will test whether there are `data-testids` for the first ten items contained in the 'sales' table.
 
 </details>
 
-⚠️**Importante**: o avaliador oficial vai testar somente uma venda, mas caso você opte por usar o parâmetro de ambiente `EVAL_ALWAYS_RESTORE_DEV_DB=false` no back-end, localmente o teste fará avaliação de até dez vendas.
+⚠️**Important**: the official evaluator will only test one sale, but if you choose to use the environment parameter `EVAL_ALWAYS_RESTORE_DEV_DB=false` in the back-end, locally the test will evaluate up to ten sales.
 
 ---
 
-#### 28 - Desenvolva a tela de pedidos da pessoa vendedora de forma a conter a lista de pedidos do mesmo com os dados corretos
+#### 28 - Develop the seller's order screen to contain the list of orders with the correct data
 
-**Observações técnicas**
+**Technical observations**
 
-- Garanta que os dados dos itens de cada card condizem com as vendas registradas na tabela `sales` (vendas);
+- Ensure that the item data on each card matches the sales recorded in the `sales` table;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador vai testar se os dados associados aos `data-testids` dos dez primeiros itens batem com os do banco de dados.
+- The evaluator will test whether the data associated with the `data-testids` of the first ten items matches those in the database.
 
 </details>
 
-⚠️**Importante**: o avaliador oficial vai testar somente uma venda, mas caso você opte por usar o parâmetro de ambiente `EVAL_ALWAYS_RESTORE_DEV_DB=false` no back-end, localmente o teste fará avaliação de até dez vendas.
+⚠️**Important**: the official evaluator will only test one sale, but if you choose to use the environment parameter `EVAL_ALWAYS_RESTORE_DEV_DB=false` in the back-end, locally the test will evaluate up to ten sales.
 
 ---
 
-#### 29 - Desenvolva a tela de pedidos da pessoa vendedora de forma a dar acesso à tela de detalhes de um pedido ao clicar no card do mesmo
+#### 29 - Develop the seller's order screen to give access to the order details screen by clicking on the order card
 
-**Observações técnicas**
+**Technical observations**
 
-- Não se preocupe aqui em ter a tela de detalhes do pedido pronta: oque deve estar garantido, é que é possível ter acesso a uma rota `localhost:3000/seller/orders/<id>` no front;
-- Aqui, o acesso a cada item deve ser possível pelos cards na tela de pedidos.
+- Don't worry about having the order details screen ready: what should be guaranteed is that it is possible to have access to a route `localhost:3000/seller/orders/<id>` at the front;
+- Here, access to each item must be possible through cards on the order screen.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador acessará a tela de detalhes do último pedido pela tela de pedidos, após o checkout do mesmo. Por exemplo:
-  - Se o pedido gerado for o de `id` `5`, o avaliador espera acessar o endereço `localhost:3000/seller/orders/5`,  via aquele card.
+- The evaluator will access the last order details screen through the order screen, after checking out the order. For example:
+   - If the order generated is `id` `5`, the evaluator expects to access the address `localhost:3000/seller/orders/5`, via that card.
 
 </details>
 
@@ -1215,80 +1217,80 @@ Todos os testes desse arquivo:
 
 ### `08seller_order_details.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Vão utilizar uma amostragem de produtos do banco de dados (impresso na tela durante o teste);
-- Vão fazer login com o cliente "Zé Birita";
-- Vão gerar um novo pedido com o preço total presumido e dados aleatórios para utilização nos testes (impresso na tela durante o teste);
-- Vão fazer o checkout desse novo pedido, portanto a venda estará registrada no banco de dados;
-- Vão fazer o logout do sistema;
-- Vão fazer o login com a vendedora "Fulana Pereira" utilizando o e-mail `fulana@deliveryapp.com` e senha `fulana@123`;
-- Vão clicar no card referente à venda realizada para ter acesso à tela de detalhes do mesmo.
+- They will use a sample of products from the database (printed on the screen during the test);
+- They will log in with the "Zé Birita" client;
+- They will generate a new order with the assumed total price and random data for use in tests (printed on the screen during the test);
+- They will checkout this new order, so the sale will be registered in the database;
+- They will log out of the system;
+- They will log in with the seller "Fulana Pereira" using the email `fulana@deliveryapp.com` and password `fulana@123`;
+- Click on the card relating to the sale made to access its details screen.
 
 ---
 
-#### 30 - Crie uma tela de detalhes do pedido da pessoa vendedora com elementos a partir dos data-testids disponíveis no protótipo
+#### 30 - Create a salesperson's order details screen with elements from the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`P. Vend / Detalhes do Pedido`](#construcao-do-front-end-e-componentizacao);
+- Guide yourself through the following prototype screen: [`P. Sales / Order Details`](#construcao-do-front-end-e-componentizacao);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará os `data-testids` referentes aos itens da venda e demais elementos.
+- The evaluator will test the `data-testids` referring to the sale items and other elements.
 
 </details>
 
 ---
 
-#### 31 - Desenvolva a tela de detalhes do pedido da pessoa vendedora de forma a possuir os dados corretos da venda
+#### 31 - Develop the seller's order details screen so as to have the correct sales data
 
-**Observações técnicas**
+**Technical observations**
 
-- Sua aplicação deve garantir que os dados do pedido do cliente estejam atualizados ao acessar o detalhe de algum deles.
+- Your application must ensure that the customer's order data is updated when accessing the details of any of them.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará se os dados contidos nos campos das linhas (produtos relacionados à venda), tal como demais valores (id do pedido, nome da pessoa vendedora, data de pedido, status da venda, preço total) conferem com os dados da venda feita anteriormente.
+- The evaluator will test whether the data contained in the line fields (products related to the sale), as well as other values (order ID, name of the seller, order date, sale status, total price) match the sales data done previously.
 
 </details>
 
 ---
 
-## `Validação do Status do Pedido`
+## `Order Status Validation`
 
-A validação de status consiste em uma série de testes que devem assegurar que os status do pedido sejam alterados e refletidos para clientes e pessoas vendedoras.
+Status validation consists of a series of tests that should ensure that order statuses are changed and reflected for customers and sellers.
 
 ---
 
-#### 32 - Desenvolva a tela de detalhes do pedido da pessoa vendedora de forma a ser capaz de alterar o status do pedido
+#### 32 - Develop the seller's order details screen in order to be able to change the order status
 
-**Observações técnicas**
+**Technical observations**
 
-- Os status de um pedido podem ser:
-  - `Pendente` - **Valor padrão** na criação do pedido;
-  - `Preparando` - Status que **pode ser alterado pela pessoa vendedora**;
-  - `Em Trânsito` - Status que **pode ser alterado pela pessoa vendedora**;
-  - `Entregue` - Status que **pode ser alterado pelo cliente**.
+- The status of an order can be:
+   - `Pending` - **Default value** when creating the order;
+   - `Preparing` - Status that **can be changed by the selling person**;
+   - `In Transit` - Status that **can be changed by the selling person**;
+   - `Delivered` - Status that **can be changed by the customer**.
 
-- Esse requisito vai avaliar se as alterações do status do pedido na tela da pessoa vendedora são persistentes ao clicar em: `Botão de marcar para 'preparo'`, `Botão de marcar para 'saiu para entrega'`:
-  - O `Botão de marcar para 'preparo'` deve estar habilitado caso o status do pedido esteja como `Pendente`. Esse botão deve alterar o status do pedido para `Preparando`;
-  - O `Botão de marcar para 'preparo'` deve estar desabilitado caso o status do pedido esteja como `Preparando`, `Em Trânsito` ou `Entregue`;
-  - O `Botão de marcar para 'saiu para entrega'` deve estar habilitado caso o status do pedido esteja como `Preparando`. Esse botão deve alterar o status do pedido para `Em Trânsito`;
-  - O `Botão de marcar para 'saiu para entrega'` deve estar desabilitado caso o status do pedido esteja como `Pendente`, `Em Trânsito` ou `Entregue`;
+- This requirement will assess whether changes to the order status on the seller's screen are persistent when clicking on: `Mark button for 'preparation'`, `Mark button for 'out for delivery'`:
+   - The `Mark for 'preparation' button` must be enabled if the order status is `Pending`. This button should change the order status to `Preparing`;
+   - The `Mark for 'preparation' button` must be disabled if the order status is `Preparing`, `In Transit` or `Delivered`;
+   - The `Mark button for 'out for delivery'` must be enabled if the order status is `Preparing`. This button should change the order status to `In Transit`;
+   - The `Mark button for 'out for delivery'` must be disabled if the order status is `Pending`, `In Transit` or `Delivered`;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará se a alteração do pedido é persistente após atualizar a página fazendo o processo de logout/login.
+- The evaluator will test whether the order change is persistent after updating the page by completing the logout/login process.
 
 </details>
 
@@ -1296,332 +1298,333 @@ A validação de status consiste em uma série de testes que devem assegurar que
 
 ### `09customer_seller_status_sync.test`
 
-Todos os testes desse arquivo:
+All tests in this file:
 
-- Vão utilizar uma amostragem de produtos do banco de dados (impresso na tela durante o teste);
-- Vão fazer login com o cliente "Zé Birita";
-- Vão gerar um novo pedido com o preço total presumido e dados aleatórios para utilização nos testes (impresso na tela durante o teste);
-- Vão fazer o checkout desse novo pedido, portanto a venda estará registrada no banco de dados;
-- Vão gerar outro contexto de navegação (anônimo) para utilizar no fluxo da pessoa vendedora;
-- Vão fazer o login (no novo contexto) com a vendedora "Fulana Pereira";
-- Vão clicar no card referente à venda realizada para ter acesso à tela de detalhes do mesmo.
+- They will use a sample of products from the database (printed on the screen during the test);
+- They will log in with the "Zé Birita" client;
+- They will generate a new order with the assumed total price and random data for use in tests (printed on the screen during the test);
+- They will checkout this new order, so the sale will be registered in the database;
+- They will generate another navigation context (anonymous) to use in the seller's flow;
+- They will log in (in the new context) with the salesperson "Fulana Pereira";
+- Click on the card relating to the sale made to access its details screen.
 
 ---
 
-#### 33 - Garanta que o status do pedido atualizado na tela de detalhes do pedido da pessoa vendedora seja refletido na tela de detalhes do pedido do cliente após atualização das páginas
+#### 33 - Ensure that the order status updated on the seller's order details screen is reflected on the customer's order details screen after pages are updated
 
-**Observações técnicas**
+**Technical observations**
 
-- Sua aplicação deve garantir que:
-  - Dado o fluxo de criação de um pedido pelo cliente, que leva a tela de detalhes daquele pedido;
-  - Dado o acesso dos detalhes desse pedido pela pessoa vendedora em paralelo (não há logout no processo);
-- Seja possível **fazer a alteração no status do pedido pela pessoa vendedora**, e ao **atualizar as páginas**, esse status **esteja refletido na tela de detalhes do pedido do cliente**.
+- Your application must ensure that:
+   - Given the flow of creating an order by the customer, which leads to the details screen for that order;
+   - Given access to the details of this order by the selling person in parallel (there is no logout in the process);
+- It is possible to **make changes to the order status by the sales person**, and when **updating the pages**, this status **is reflected in the customer's order details screen**.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador verificará se, ao alterar o status do pedido na tela da pessoa vendedora, o mesmo também é alterado na tela de detalhes do pedido do cliente após atualização das páginas fazendo o processo de logout/login nas mesmas.
+- The evaluator will check whether, when changing the order status on the seller's screen, it is also changed on the customer's order details screen after updating the pages by logging out/logging in to them.
 
 </details>
 
 ---
 
-#### 34 - Garanta que o status do pedido atualizado na tela de detalhes do pedido da pessoa vendedora seja refletido na tela de lista de pedidos do cliente após atualização das páginas
+#### 34 - Ensure that the order status updated on the seller's order details screen is reflected on the customer's order list screen after pages are updated
 
-**Observações técnicas**
+**Technical observations**
 
-**Sua aplicação deve garantir que seja possível fazer a alteração no status do pedido pela pessoa vendedora**, e ao atualizar as páginas, esse status esteja refletido no mesmo item listado na tela de pedido do cliente. Isso deve ocorrer em dois cenários:
+**Your application must ensure that it is possible to change the order status by the sales person**, and when updating the pages, this status is reflected in the same item listed on the customer's order screen. This should occur in two scenarios:
 
-- Dado o fluxo de criação de um pedido pelo cliente, acessando após isso a tela de lista de pedidos do mesmo;
-- Dado o acesso dos detalhes desse pedido pela pessoa vendedora em paralelo (não há logout no processo);
+- Given the flow of creating an order by the customer, then accessing the order list screen;
+- Given access to the details of this order by the selling person in parallel (there is no logout in the process);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador verificará se, ao alterar o status do pedido na tela da pessoa vendedora, o mesmo também é alterado na tela de pedidos do cliente após atualização das páginas fazendo o processo de logout/login nas mesmas.
+- The evaluator will check whether, when changing the order status on the sales person's screen, it is also changed on the customer's order screen after updating the pages by completing the logout/login process on them.
 
 </details>
 
 ---
 
-#### 35 - Garanta que o status do pedido atualizado na tela de detalhes do pedido do cliente seja refletido na tela de lista de pedidos da pessoa vendedora após atualização das páginas
+#### 35 - Ensure that the order status updated on the customer's order details screen is reflected on the seller's order list screen after pages are updated
 
-**Observações técnicas**
+**Technical observations**
 
-**Sua aplicação deve garantir que seja possível fazer a alteração no status do pedido pelo cliente**, e ao atualizar as páginas, esse status esteja refletido no mesmo item listado na tela de pedido da pessoa vendedora. Isso deve ocorrer em dois cenários:
+**Your application must ensure that it is possible to change the order status by the customer**, and when updating the pages, this status is reflected in the same item listed on the seller's order screen. This should occur in two scenarios:
 
-- Dado o fluxo de criação de um pedido pelo cliente, que leva a tela de detalhes daquele pedido;
-- Dado o acesso aos detalhes desse pedido pela pessoa vendedora em paralelo (não há logout no processo);
-- Dada a alteração de status do pedido da pessoa vendedora (colocando o pedido "Em trânsito");
-- Dado o acesso da lista de pedidos pela pessoa vendedora em paralelo (não há logout no processo);
+- Given the flow of creating an order by the customer, which leads to the details screen for that order;
+- Given access to the details of this order by the selling person in parallel (there is no logout in the process);
+- Given the change in the status of the seller's order (placing the order "In transit");
+- Given access to the order list by the sales person in parallel (there is no logout in the process);
 
-- Esse requisito também validará a interação com: `Botão de marcar como 'entregue'`:
-  - O `Botão de marcar como 'entregue'` deve estar habilitado caso o status do pedido esteja como `Em Trânsito`. Esse botão deve alterar o status do pedido para `Entregue`;
-  - O `Botão de marcar como 'entregue'` deve estar desabilitado caso o status do pedido esteja como `Pendente`, `Preparando` ou `Entregue`;
+- This requirement will also validate interaction with: `Mark as 'delivered' button`:
+   - The `Mark as 'delivered' button must be enabled if the order status is `In Transit`. This button should change the order status to `Delivered`;
+   - The `Mark as 'delivered' button must be disabled if the order status is `Pending`, `Preparing` or `Delivered`;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador verificará se, ao alterar o status do pedido na tela do cliente, o mesmo também é alterado na tela de detalhes do pedido da pessoa vendedora após atualização das páginas fazendo o processo de logout/login nas mesmas.
+- The evaluator will check whether, when changing the order status on the customer's screen, it is also changed on the seller's order details screen after updating the pages by completing the logout/login process on them.
 
 </details>
 
 ---
 
-## `Fluxo da Pessoa Administradora`
+## `Administrator Person Flow`
 
-O fluxo da pessoa administradora deve possibilitar o cadastro de clientes e pessoas vendedoras, tal como a remoção dos mesmos.
+The administrative person flow must enable the registration of customers and salespeople, as well as their removal.
 
 ---
 
 ### `10admin_manage_users.test`
 
-Todos os testes desse arquivo devem:
+All tests in this file must:
 
-- Fazer login utilizando dados da pessoa administradora;
-  - email `adm@deliveryapp.com` e senha `--adm2@21!!--`.
-- Ter a seguinte página esperada pelo avaliador: `localhost:3000/admin/manage`.
+- Log in using data from the administrator;
+   - email `adm@deliveryapp.com` and password `--adm2@21!!--`.
+- Have the following page expected by the evaluator: `localhost:3000/admin/manage`.
 
 ---
 
-#### 36 - Crie uma tela de pessoa administradora com elementos a partir dos data-testids disponíveis no protótipo
+#### 36 - Create an administrator screen with elements from the data-testids available in the prototype
 
-**Observações técnicas**
+**Technical observations**
 
-- Se oriente pela seguinte tela do protótipo: [`P. Adm. / Gerenciamento`](#construcao-do-front-end-e-componentizacao);
-  - Em um primeiro momento, não serão considerados os itens da tabela de usuários. Foque aqui em consolidar o formulário de cadastro.
+- Guide yourself through the following prototype screen: [`P. Adm. / Management`](#construcao-do-front-end-e-componentizacao);
+   - Initially, items from the user table will not be considered. Focus here on consolidating the registration form.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará os `data-testids` referentes aos elementos do formulário de cadastro.
+- The evaluator will test the `data-testids` referring to the elements of the registration form.
 
 </details>
 
 ---
 
-#### 37 - Desenvolva a tela da pessoa administradora de forma a validar o formulário de cadastro
+#### 37 - Develop the administrator screen to validate the registration form
 
-**Observações técnicas**
+**Technical observations**
 
-- Assim como no formulário de registro aqui também serão validados os campos para registro;
-- Aqui, os critérios para considerar os dados mal formatados são:
-  - Nome completo com número de caracteres menor que `12`.
-  - Email incompleto, fora de um padrão comum: `<email>@<domínioPrincipal>.<domínioGenérico>`;
-  - Senha com número de caracteres menor que `6`;
-  - Não definir o cargo (`role`):
-   👀**De olho na dica**: o `select` do cargo (`role`) pode ter um valor default.
+- Just like the registration form, the fields for registration will also be validated;
+- Here, the criteria for considering poorly formatted data are:
+   - Full name with a number of characters less than `12`.
+   - Incomplete email, outside of a common pattern: `<email>@<MainDomain>.<GenericDomain>`;
+   - Password with a number of characters less than `6`;
+   - Do not define the position (`role`):
+    👀**Keep an eye on the tip**: the `select` of the position (`role`) can have a default value.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará 4 situações aleatórias diferentes (uma para cada validação) de maneira isolada, sendo uma delas válida;
-- O avaliador testará seu formulário com as 4 situações de maneira sequencial;
-- O avaliador não vai executar o registro pelo botão de registro: ele validará se o botão ficará habilitado ou não, a depender dos critérios durante o input dos dados;
-- É esperado que haja a validação dos dados durante a escrita dos mesmos.
+- The evaluator will test 4 different random situations (one for each validation) in isolation, one of which is valid;
+- The evaluator will test your form with the 4 situations sequentially;
+- The evaluator will not perform the registration using the registration button: he will validate whether the button will be enabled or not, depending on the criteria during data entry;
+- It is expected that data will be validated during writing.
 
 </details>
 
 ---
 
-#### 38 - Desenvolva a tela da pessoa administradora de forma que seja possível cadastrar pessoas usuárias válidas
+#### 38 - Develop the administrator screen so that it is possible to register valid users
 
-**Observações técnicas**
+**Technical observations**
 
-Sua página deve ser capaz de cadastrar pessoas usuárias com dados válidos:
+Your page must be able to register users with valid data:
 
-- Note que, a senha deve ser armazenada no banco como uma [`hash md5`](https://pt.wikipedia.org/wiki/MD5). A tradução **deve ocorrer na API**;
-- É possível utilizar bibliotecas de terceiros como a [`md5`](https://www.npmjs.com/package/md5) ou a nativa [`crypto`](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options) para conversão de valores para `md5`;
+- Note that the password must be stored in the database as a [`md5 hash`](https://pt.wikipedia.org/wiki/MD5). The translation **must occur in the API**;
+- It is possible to use third-party libraries such as [`md5`](https://www.npmjs.com/package/md5) or the native [`crypto`](https://nodejs.org/api/crypto. html#crypto_crypto_createhash_algorithm_options) for converting values to `md5`;
 
-Aqui, **a rota de cadastro deve ser diferente da rota de cadastro comum**, pois também é possível definir a categoria de usuário aqui (`role`);
+Here, **the registration route must be different from the common registration route**, as it is also possible to define the user category here (`role`);
 
-- Essa é uma rota específica para pessoa administradora, portanto a mesma rota na API deve considerar um token válido e referente ao usuário de categoria `administrator`;
+- This is a specific route for the administrator person, therefore the same route in the API must consider a valid token referring to the `administrator` category user;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará fazer a ação de cadastro com uma lista de pessoas (impressa durante o teste) com dados aleatórios válidos, validando-os posteriormente no banco de dados;
-- Para cada pessoa, o avaliador espera que haja uma requisição `POST` para API ao clicar no `Botão de registro`, que retorne o status `201 - Created`;
-- Os dados dessa pessoa serão validados na tabela `user` do banco de dados.
+- The evaluator will try to carry out the registration action with a list of people (printed during the test) with valid random data, later validating them in the database;
+- For each person, the evaluator expects there to be a `POST` request to the API when clicking on the `Register button`, which returns the status `201 - Created`;
+- This person's data will be validated in the database's `user` table.
 
 </details>
 
 ---
 
-#### 39 - Desenvolva a tela da pessoa administradora de forma que ela impossibilite o cadastro de pessoas usuárias já existentes
+#### 39 - Develop the administrator screen in such a way that it makes it impossible for existing users to register
 
-**Observações técnicas**
+**Technical observations**
 
-Sua página deve impedir o cadastro de pessoas com o mesmo Nome ou E-mail.
+Your page must prevent people with the same name or email from registering.
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará realizar o fluxo de cadastro anterior duas vezes, mas com apenas uma pessoa usuária gerada aleatoriamente.
-- Na primeira vez o avaliador espera que haja uma requisição `POST` para API ao clicar no `Botão de registro`, que retorne o status `201 - Created`;
-- Na segunda vez o avaliador espera que haja uma requisição `POST` para API ao clicar no `Botão de registro`, que retorne o status `409 - Conflict`;
-- O avaliador espera que apareça na tela um elemento, antes oculto, com uma mensagem de erro qualquer.
-  - Elemento: `admin_manage__element-invalid-register`.
+- The evaluator will attempt to perform the previous registration flow twice, but with only one randomly generated user.
+- The first time the evaluator expects there to be a `POST` request to the API when clicking on the `Register button`, which returns the status `201 - Created`;
+- The second time the evaluator expects there to be a `POST` request to the API when clicking on the `Register button`, which returns the status `409 - Conflict`;
+- The evaluator waits for an element, previously hidden, to appear on the screen with some error message.
+   - Element: `admin_manage__element-invalid-register`.
 
 </details>
 
 ---
 
-#### 40 - (`Bônus`) Desenvolva a tela da pessoa administradora de forma que haja uma tabela de pessoas usuárias cadastradas
+#### 40 - (`Bonus`) Develop the administrator screen so that there is a table of registered users
 
-**Observações técnicas**
+**Technical observations**
 
-- Aqui, é necessário que a página também retorne os dados atualizados das pessoas usuárias cadastradas (não incluindo pessoas administradoras):
-  👀**De olho na dica**: é possível utilizar um contexto específico que contemple o formulário e a tabela de usuários;
+- Here, the page must also return updated data for registered users (not including administrators):
+   👀**Keep an eye on the tip**: it is possible to use a specific context that includes the form and the user table;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador testará os data-testids referentes aos elementos da tabela de pessoas usuárias;
-- O avaliador tentará realizar o fluxo de cadastro com uma quantidade aleatória de pessoas usuárias válidas e verificará se as mesmas aparecem na tabela.
+- The evaluator will test the data-testids referring to the elements of the user table;
+- The evaluator will try to carry out the registration flow with a random number of valid users and check whether they appear in the table.
 
 </details>
 
 ---
 
-#### 41 - (`Bônus`) Desenvolva a tela da pessoa administradora de forma que seja possível deletar pessoas usuárias na tabela
+#### 41 - (`Bonus`) Develop the administrator screen so that it is possible to delete users from the table
 
-**Observações técnicas**
+**Technical observations**
 
-- A pessoa administradora deve ser capaz de remover pessoas usuárias através da tabela.
-  - Na API, **essa é uma rota protegida e exclusiva da pessoa administradora**, portanto deve considerar um token válido e referente ao usuário de categoria `administrator`;
+- The administrator must be able to remove users through the table.
+   - In the API, **this is a protected and exclusive route for the administrator**, so it must consider a valid token referring to the user in the `administrator` category;
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- O avaliador tentará realizar a remoção de itens validando-os na tabela.
-  - O avaliador vai deletar uma quantidade aleatória de itens do carrinho (esses dados são impressos no teste).
+- The evaluator will attempt to remove items by validating them in the table.
+   - The evaluator will delete a random number of items from the cart (this data is printed in the test).
 
 </details>
 
 ---
 
-## `Cobertura de Testes`
+## `Test Coverage`
 
-A cobertura de testes deve garantir que, tanto no `front-end` quanto no `back-end`, os sistemas foram testados e possuem componentes e/ou funções estáveis e à prova de erros.
+Test coverage must ensure that, both in the `front-end` and in the `back-end`, the systems have been tested and have stable and error-proof components and/or functions.
 
-> ⚠️ Lembrando que fica a critério de cada grupo ou indivíduo escolher o tipo de teste a ser implementado, tanto _testes unitários_ quanto _testes de integração_ são aceitos, inclusive os dois de forma complementar.
+> ⚠️ Remembering that it is up to each group or individual to choose the type of test to be implemented, both _unit tests_ and _integration tests_ are accepted, including both in a complementary way.
 
 ---
 
 ### `11coverage_tests.test`
 
-Antes de todos os testes, esse arquivo deve rodar, em ambas aplicações, o comando `test:coverage:json`.
+Before all tests, this file must run, in both applications, the command `test:coverage:json`.
 
-- Tanto no `front-end` quanto no `back-end`, esse comando deve gerar um arquivo de cobertura (`coverage`) específico para cada;
-- Serão coletados dos arquivos, os dados:
-  - `pct` - porcentagem total da cobertura;
-  - `skipped` - se algum teste foi pulado com `.only` ou `.skip`;
-  - `covered` - quantas linhas foram cobertas no teste.
+- Both in the `front-end` and in the `back-end`, this command must generate a specific coverage file (`coverage`) for each;
+- Data will be collected from the files:
+   - `pct` - total percentage of coverage;
+   - `skipped` - if any test was skipped with `.only` or `.skip`;
+   - `covered` - how many lines were covered in the test.
 
-⚠️ **Importante** ⚠️:
+⚠️ **Important** ⚠️:
 
-- Embora seja possível testar localmente com `.only` e `.skip` (principalmente para ganhar tempo), essas alterações dos testes não devem subir com sua aplicação para o repositório, correndo o risco de desaprovação no projeto.
+- Although it is possible to test locally with `.only` and `.skip` (mainly to save time), these test changes should not be uploaded to the repository with your application, running the risk of disapproval in the project.
 
-- O avaliador também retornará erro e não fará a avaliação do requisito caso os testes estejam dando **erros de promessas que não são tratadas** (`UnhandledPromiseRejectionWarning`), por isso, busquem sempre fazer o tratamento correto de funções assíncronas durante o projeto, tal como nos testes.
+- The evaluator will also return an error and will not evaluate the requirement if the tests are giving **errors of promises that are not handled** (`UnhandledPromiseRejectionWarning`), so always try to handle asynchronous functions correctly during the project , just like in the tests.
 
-#### 42 - Crie testes que cubram no mínimo 30 por cento dos arquivos do front-end e back-end em src com um mínimo de 75 linhas cobertas em cada
+#### 42 - Create tests that cover a minimum of 30 percent of the front-end and back-end files in src with a minimum of 75 lines covered in each
 
-**Observações técnicas**
+**Technical observations**
 
-Garanta que tanto o seu `front-end` quanto `back-end` possuem testes que cubram ao menos `30%` da aplicação com `75` linhas cobertas:
+Ensure that both your `front-end` and `back-end` have tests that cover at least `30%` of the application with `75` lines covered:
 
-- É possível testar a cobertura de duas formas:
-  - A partir da raiz de cada projeto, utilizando `npm run test:coverage` (o que deve trazer uma tabela de cobertura, sem o número absoluto de linhas cobertas);
-  - A partir da raiz de cada projeto, utilizando `npm run test:coverage:json` (o que deve trazer um arquivo `./coverage/coverage.json`, com um detalhamento da cobertura);
+- It is possible to test coverage in two ways:
+   - From the root of each project, using `npm run test:coverage` (which should bring up a coverage table, without the absolute number of lines covered);
+   - From the root of each project, using `npm run test:coverage:json` (which should bring a file `./coverage/coverage.json`, with coverage details);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- Serão validados os dados de cobertura no `front-end` e no `back-end`;
+- Coverage data will be validated on the `front-end` and `back-end`;
 
 </details>
 
 ---
 
-#### 43 - (`Bônus`) Crie testes que cubram no mínimo 60 por cento dos arquivos do front-end e back-end em src com um mínimo de 150 linhas cobertas em cada
+#### 43 - (`Bonus`) Create tests that cover a minimum of 60 percent of the front-end and back-end files in src with a minimum of 150 lines covered in each
 
-**Observações técnicas**
+**Technical observations**
 
-Garanta que tanto o seu `front-end` quanto `back-end` possuem testes que cubram ao menos `60%` da aplicação com `150` linhas cobertas:
+Ensure that both your `front-end` and `back-end` have tests that cover at least `60%` of the application with `150` lines covered:
 
-- É possível testar a cobertura de duas formas:
-  - A partir da raiz de cada projeto, utilizando `npm run test:coverage` (o que deve trazer uma tabela de cobertura, sem o número absoluto de linhas cobertas);
-  - A partir da raiz de cada projeto, utilizando `npm run test:coverage:json` (o que deve trazer um arquivo `./coverage/coverage.json`, com um detalhamento da cobertura);
+- It is possible to test coverage in two ways:
+   - From the root of each project, using `npm run test:coverage` (which should bring up a coverage table, without the absolute number of lines covered);
+   - From the root of each project, using `npm run test:coverage:json` (which should bring a file `./coverage/coverage.json`, with coverage details);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- Serão validados os dados de cobertura no `front-end` e no `back-end`;
+- Coverage data will be validated on the `front-end` and `back-end`;
 
 </details>
 
 ---
 
-#### 44 - (`Bônus`) Crie testes que cubram no mínimo 90 por cento dos arquivos do front-end e back-end em src com um mínimo de 225 linhas cobertas em cada
+#### 44 - (`Bonus`) Create tests that cover a minimum of 90 percent of the front-end and back-end files in src with a minimum of 225 lines covered in each
 
-**Observações técnicas**
+**Technical observations**
 
-Garanta que tanto o seu `front-end` quanto `back-end` possuem testes que cubram ao menos `90%` da aplicação com `225` linhas cobertas:
+Ensure that both your `front-end` and `back-end` have tests that cover at least `90%` of the application with `225` lines covered:
 
-- É possível testar a cobertura de duas formas:
-  - A partir da raiz de cada projeto, utilizando `npm run test:coverage` (o que deve trazer uma tabela de cobertura, sem o número absoluto de linhas cobertas);
-  - A partir da raiz de cada projeto, utilizando `npm run test:coverage:json` (o que deve trazer um arquivo `./coverage/coverage.json`, com um detalhamento da cobertura);
+- It is possible to test coverage in two ways:
+   - From the root of each project, using `npm run test:coverage` (which should bring up a coverage table, without the absolute number of lines covered);
+   - From the root of each project, using `npm run test:coverage:json` (which should bring a file `./coverage/coverage.json`, with coverage details);
 
 <details>
-  <summary>
-    <b>O que será avaliado</b>
-  </summary>
+   <summary>
+     <b>What will be evaluated</b>
+   </summary>
 
-- Serão validados os dados de cobertura no `front-end` e no `back-end`;
+- Coverage data will be validated on the `front-end` and `back-end`;
 
 </details>
 
 ---
 
-## `Extra não avaliativo`
+## `Non-evaluative extra`
 
-### Realizar o deploy do projeto back-end e front-end
+### Deploy the back-end and front-end project
 
-➡️ **Terminei meu projeto, e agora?** Uma prática legal, caso queira apresentar ou publicar seu projeto, é fazer o `deploy` da sua aplicação.
+➡️ **I finished my project, now what?** A good practice, if you want to present or publish your project, is to `deploy` your application.
 
-Você pode conferir nosso conteúdo sobre [deploy](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/94d0e996-1827-4fbc-bc24-c99fb592925b/section/fd648646-af98-4560-b782-bb8c1a9817ff/day/d1143e25-459a-49d9-b1a1-dd8a6632485c/lesson/cca5d6b4-049c-488b-a640-0cdf98414330) na plataforma de aprendizagem.
+You can check out our content on [deploy](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/94d0e996-1827-4fbc-bc24-c99fb592925b/section/fd648646- af98-4560-b782-bb8c1a9817ff/day/d1143e25-459a-49d9-b1a1-dd8a6632485c/lesson/cca5d6b4-049c-488b-a640-0cdf98414330) on the learning platform.
 
-Dentre algumas ferramentas para deploy temos: [GitHub Pages](https://pages.github.com/), [Vercel](https://vercel.com/), [Railway](https://railway.app/) e [Supabase](https://supabase.com/), existem muitas outras ferramentas, cada uma com as suas características e peculiaridades, sintam-se a vontade para decidir quais ferramentas utilizar.
+Some deployment tools include: [GitHub Pages](https://pages.github.com/), [Vercel](https://vercel.com/), [Railway](https://railway.app/ ) and [Supabase](https://supabase.com/), there are many other tools, each with its own characteristics and peculiarities, feel free to decide which tools to use.
 
 ---
 
-### Qual poderia ser o próximo passo? 🤔
+### What could be the next step? 🤔
 
-Se seu projeto estiver concluído, considere a expansão que ele pode passar ao longo do tempo. Esse projeto consegue expandir suas entidades? Consegue ter outros módulos (um web-chat, uma área de gerenciar vendedores, instâncias para lojas)?
+If your project is complete, consider how it can expand over time. Can this project expand its entities? Can you have other modules (a web-chat, an area to manage sellers, instances for stores)?
 
-É super importante que tenhamos seguido todos os princípios e boas práticas de programação (como `SOLID`, por exemplo), tal como uma boa modelagem do banco de dados que torne possível gerar escala.
+It is super important that we have followed all the principles and good programming practices (like `SOLID`, for example), such as good database modeling that makes it possible to generate scale.
 
-Evidentemente, nada fica ideal em um primeiro momento, mas quanto mais conseguirmos trabalhar no nosso projeto pensando a manutenção dele no longo prazo, mais fácil fica de programarmos coisas novas partindo do nosso código legado, por isso é importante sempre revisar nosso trabalho!
+Obviously, nothing is ideal at first, but the more we can work on our project with long-term maintenance in mind, the easier it will be to program new things using our legacy code, which is why it is important to always review our work!
+
